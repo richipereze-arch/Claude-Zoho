@@ -1,0 +1,7 @@
+# Lotes de carga: contienen datos personales y respuestas del CRM. Nunca versionar.
+runs/
+# Credenciales: el conector MCP gestiona OAuth; nunca guardar tokens en el repo.
+.env
+*.token
+*secret*
+__pycache__/

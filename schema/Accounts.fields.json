@@ -1,0 +1,2039 @@
+{
+ "module": "Accounts",
+ "layouts": [
+  {
+   "name": "Standard",
+   "id": "6839037000000091029",
+   "status": "active"
+  }
+ ],
+ "fields": [
+  {
+   "api_name": "Owner",
+   "label": "Propietario de Cuenta",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Rating",
+   "label": "Calificación",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "En Proceso",
+    "Caído",
+    "Cliente Activo (operando contínuamente) [Acquired]",
+    "Cliente Inactivo (con dinero para operar) [Active]",
+    "Cliente Quemado y Retirado (Perdío parte de su capital y retiró) [Market Failed]",
+    "Cliente con Ganancias y retirado (Gano capital y se retiró) [Project Cancelled]",
+    "Cliente Quemado (Perdío casi o todosucapital) [ShutDown]",
+    "Reactivado",
+    "Referido"
+   ],
+   "picklist_values": [
+    {
+     "display": "En Proceso",
+     "actual": "En Proceso"
+    },
+    {
+     "display": "Caído",
+     "actual": "Caído"
+    },
+    {
+     "display": "Cliente Activo (operando contínuamente)",
+     "actual": "Acquired"
+    },
+    {
+     "display": "Cliente Inactivo (con dinero para operar)",
+     "actual": "Active"
+    },
+    {
+     "display": "Cliente Quemado y Retirado (Perdío parte de su capital y retiró)",
+     "actual": "Market Failed"
+    },
+    {
+     "display": "Cliente con Ganancias y retirado (Gano capital y se retiró)",
+     "actual": "Project Cancelled"
+    },
+    {
+     "display": "Cliente Quemado (Perdío casi o todosucapital)",
+     "actual": "ShutDown"
+    },
+    {
+     "display": "Reactivado",
+     "actual": "Reactivado"
+    },
+    {
+     "display": "Referido",
+     "actual": "Referido"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Account_Name",
+   "label": "Nombre de Cuenta",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": true,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 200,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Phone",
+   "label": "Móvil",
+   "data_type": "phone",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 30,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Parent_Account",
+   "label": "Cuenta principal",
+   "data_type": "lookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": "Accounts",
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Website",
+   "label": "Link Formulario de Trading",
+   "data_type": "website",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 255,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Account_Number",
+   "label": "N° Cuenta MT5",
+   "data_type": "bigint",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 18,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Account_Type",
+   "label": "Modalidad de Operación",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Manual [Supplier]",
+    "MAM",
+    "BOT",
+    "Otro Producto Activo",
+    "Inactiva [Vendor]",
+    "Analista [Analyst]",
+    "Cliente [Customer]",
+    "Competidor [Competitor]",
+    "Distribuidor [Distributor]",
+    "Integrador [Integrator]",
+    "Inversor [Investor]",
+    "Otro [Other]",
+    "Posible [Prospect]",
+    "Prensa [Press]",
+    "Revendedor [Reseller]",
+    "Socio [Partner]"
+   ],
+   "picklist_values": [
+    {
+     "display": "Manual",
+     "actual": "Supplier"
+    },
+    {
+     "display": "MAM",
+     "actual": "MAM"
+    },
+    {
+     "display": "BOT",
+     "actual": "BOT"
+    },
+    {
+     "display": "Otro Producto Activo",
+     "actual": "Otro Producto Activo"
+    },
+    {
+     "display": "Inactiva",
+     "actual": "Vendor"
+    },
+    {
+     "display": "Analista",
+     "actual": "Analyst"
+    },
+    {
+     "display": "Cliente",
+     "actual": "Customer"
+    },
+    {
+     "display": "Competidor",
+     "actual": "Competitor"
+    },
+    {
+     "display": "Distribuidor",
+     "actual": "Distributor"
+    },
+    {
+     "display": "Integrador",
+     "actual": "Integrator"
+    },
+    {
+     "display": "Inversor",
+     "actual": "Investor"
+    },
+    {
+     "display": "Otro",
+     "actual": "Other"
+    },
+    {
+     "display": "Posible",
+     "actual": "Prospect"
+    },
+    {
+     "display": "Prensa",
+     "actual": "Press"
+    },
+    {
+     "display": "Revendedor",
+     "actual": "Reseller"
+    },
+    {
+     "display": "Socio",
+     "actual": "Partner"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Ownership",
+   "label": "Broker FK",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Abel Cancino Asesor [Private]",
+    "Alejandra Madrid Martinez Asesor",
+    "Alejandro Vielma Asesor",
+    "Alexis Garrido Asesor",
+    "Alexis Muñoz Medina Asesor",
+    "Andres Alejandro Bilbao Pozo",
+    "Angelica Medina Asesora",
+    "Angelina Zuñiga Asesora",
+    "Bernardita Pizarrón Asesora",
+    "Carlos Godoy Guajardo Asesor",
+    "Carlos Javier Barria",
+    "Carlos Olguin",
+    "Carolina Nallar",
+    "Carolina Soto",
+    "Christian Tampe Asesor",
+    "Christopher Díaz Suarez Asesor",
+    "Claudia Saldaña Asesora",
+    "Cristian Fonseca Asesor",
+    "Daniel Heinrich Asesor",
+    "Dannette Ordoñez Henriquez",
+    "David Ocaranza Asesor",
+    "Esteban Retamal Santibañez",
+    "Fabian Valenzuela Asesor",
+    "Gabriela Soto Asesora",
+    "Godfrey Dawson",
+    "Gonzalo Moyano Asesor Comercial",
+    "Gonzalo Risso Asesores",
+    "Jaime Sandoval Asesor",
+    "Javier Bunster",
+    "Javiera Perez Valdes Asesor",
+    "Jesus Cruces Palma",
+    "Jorge Castillo",
+    "Jorge Yanez Mardonez Asesor",
+    "José Luis Cifuentes Martinez Asesor M",
+    "José Luis Jiménez Orellana Asesor",
+    "Jose Luis Muñoz Asesor",
+    "José Padilla Asesor",
+    "Jose Saez",
+    "Juan Elgueta Asesor",
+    "Juan Enrique Urquhart Asesor",
+    "Karen Inostroza Asesora",
+    "Kenita Moya Asesora",
+    "León Vidal Asesor",
+    "Leonardo Medina M&M Asesor",
+    "Lionel Rubio Aceituno",
+    "Luckas Ortiz",
+    "Luis Cabrera Retamal Asesor",
+    "Luis Correa Asesor",
+    "Luis Hidalgo Asesor",
+    "Manuel González Asesor",
+    "Marcelo James Harmitton",
+    "Marcelo Mocelli Asesor",
+    "Marco Antonio Ureta Asesor",
+    "Marco Cornejo Asesor",
+    "Marcos Ponce Asesor",
+    "Maria Angelica Pérez Gallardo Asesora",
+    "Maria Susana Salazar Jara Asesora Financiak",
+    "Mauricio Arancibia Rojas Asesor",
+    "Mauricio Coloma Asesor",
+    "Mauricio Pérez Celedon Asesor",
+    "Mauro Escobar Salgado",
+    "Oliver Diaz",
+    "Pablo Castro Asesor",
+    "Pablo Mercado Asesor",
+    "Pablo Solís J.",
+    "Paola Rodríguez Fuentes Asesora",
+    "Paola Rojas Asesora",
+    "Patricio Caceres Asesor Pinilla",
+    "Patricio Herrera Asesor",
+    "Patricio Nuñez Asesor",
+    "Paulina Ninoska Nuñez Asesora",
+    "Renato Eugenio Ezquerro carrillo Asesor",
+    "Richard Morales Asesor",
+    "Rita Solange Castro Gonzalez Asesor",
+    "Roberto Fuentes Ramirez Asesor",
+    "Roberto González Caceres Asesor",
+    "Rodrigo Garrido Alvear Asesor",
+    "Rosa Irene Basualto Yañez",
+    "Sandra Dueñas Riffo Asesora",
+    "Sebastián de Rementería Asesor",
+    "Sebastian Valenzuela Gil",
+    "Sergio Arcos Illanes Asesor",
+    "Victor Perez Cid Asesor",
+    "Virginia Contreras",
+    "Firmado [Public Company]",
+    "Government",
+    "Inhabilitado [Other]",
+    "Partnership",
+    "Privately Held",
+    "Público [Public]",
+    "Subsidiario [Subsidiary]"
+   ],
+   "picklist_values": [
+    {
+     "display": "Abel Cancino Asesor",
+     "actual": "Private"
+    },
+    {
+     "display": "Alejandra Madrid Martinez Asesor",
+     "actual": "Alejandra Madrid Martinez Asesor"
+    },
+    {
+     "display": "Alejandro Vielma Asesor",
+     "actual": "Alejandro Vielma Asesor"
+    },
+    {
+     "display": "Alexis Garrido Asesor",
+     "actual": "Alexis Garrido Asesor"
+    },
+    {
+     "display": "Alexis Muñoz Medina Asesor",
+     "actual": "Alexis Muñoz Medina Asesor"
+    },
+    {
+     "display": "Andres Alejandro Bilbao Pozo",
+     "actual": "Andres Alejandro Bilbao Pozo"
+    },
+    {
+     "display": "Angelica Medina Asesora",
+     "actual": "Angelica Medina Asesora"
+    },
+    {
+     "display": "Angelina Zuñiga Asesora",
+     "actual": "Angelina Zuñiga Asesora"
+    },
+    {
+     "display": "Bernardita Pizarrón Asesora",
+     "actual": "Bernardita Pizarrón Asesora"
+    },
+    {
+     "display": "Carlos Godoy Guajardo Asesor",
+     "actual": "Carlos Godoy Guajardo Asesor"
+    },
+    {
+     "display": "Carlos Javier Barria",
+     "actual": "Carlos Javier Barria"
+    },
+    {
+     "display": "Carlos Olguin",
+     "actual": "Carlos Olguin"
+    },
+    {
+     "display": "Carolina Nallar",
+     "actual": "Carolina Nallar"
+    },
+    {
+     "display": "Carolina Soto",
+     "actual": "Carolina Soto"
+    },
+    {
+     "display": "Christian Tampe Asesor",
+     "actual": "Christian Tampe Asesor"
+    },
+    {
+     "display": "Christopher Díaz Suarez Asesor",
+     "actual": "Christopher Díaz Suarez Asesor"
+    },
+    {
+     "display": "Claudia Saldaña Asesora",
+     "actual": "Claudia Saldaña Asesora"
+    },
+    {
+     "display": "Cristian Fonseca Asesor",
+     "actual": "Cristian Fonseca Asesor"
+    },
+    {
+     "display": "Daniel Heinrich Asesor",
+     "actual": "Daniel Heinrich Asesor"
+    },
+    {
+     "display": "Dannette Ordoñez Henriquez",
+     "actual": "Dannette Ordoñez Henriquez"
+    },
+    {
+     "display": "David Ocaranza Asesor",
+     "actual": "David Ocaranza Asesor"
+    },
+    {
+     "display": "Esteban Retamal Santibañez",
+     "actual": "Esteban Retamal Santibañez"
+    },
+    {
+     "display": "Fabian Valenzuela Asesor",
+     "actual": "Fabian Valenzuela Asesor"
+    },
+    {
+     "display": "Gabriela Soto Asesora",
+     "actual": "Gabriela Soto Asesora"
+    },
+    {
+     "display": "Godfrey Dawson",
+     "actual": "Godfrey Dawson"
+    },
+    {
+     "display": "Gonzalo Moyano Asesor Comercial",
+     "actual": "Gonzalo Moyano Asesor Comercial"
+    },
+    {
+     "display": "Gonzalo Risso Asesores",
+     "actual": "Gonzalo Risso Asesores"
+    },
+    {
+     "display": "Jaime Sandoval Asesor",
+     "actual": "Jaime Sandoval Asesor"
+    },
+    {
+     "display": "Javier Bunster",
+     "actual": "Javier Bunster"
+    },
+    {
+     "display": "Javiera Perez Valdes Asesor",
+     "actual": "Javiera Perez Valdes Asesor"
+    },
+    {
+     "display": "Jesus Cruces Palma",
+     "actual": "Jesus Cruces Palma"
+    },
+    {
+     "display": "Jorge Castillo",
+     "actual": "Jorge Castillo"
+    },
+    {
+     "display": "Jorge Yanez Mardonez Asesor",
+     "actual": "Jorge Yanez Mardonez Asesor"
+    },
+    {
+     "display": "José Luis Cifuentes Martinez Asesor M",
+     "actual": "José Luis Cifuentes Martinez Asesor M"
+    },
+    {
+     "display": "José Luis Jiménez Orellana Asesor",
+     "actual": "José Luis Jiménez Orellana Asesor"
+    },
+    {
+     "display": "Jose Luis Muñoz Asesor",
+     "actual": "Jose Luis Muñoz Asesor"
+    },
+    {
+     "display": "José Padilla Asesor",
+     "actual": "José Padilla Asesor"
+    },
+    {
+     "display": "Jose Saez",
+     "actual": "Jose Saez"
+    },
+    {
+     "display": "Juan Elgueta Asesor",
+     "actual": "Juan Elgueta Asesor"
+    },
+    {
+     "display": "Juan Enrique Urquhart Asesor",
+     "actual": "Juan Enrique Urquhart Asesor"
+    },
+    {
+     "display": "Karen Inostroza Asesora",
+     "actual": "Karen Inostroza Asesora"
+    },
+    {
+     "display": "Kenita Moya Asesora",
+     "actual": "Kenita Moya Asesora"
+    },
+    {
+     "display": "León Vidal Asesor",
+     "actual": "León Vidal Asesor"
+    },
+    {
+     "display": "Leonardo Medina M&M Asesor",
+     "actual": "Leonardo Medina M&M Asesor"
+    },
+    {
+     "display": "Lionel Rubio Aceituno",
+     "actual": "Lionel Rubio Aceituno"
+    },
+    {
+     "display": "Luckas Ortiz",
+     "actual": "Luckas Ortiz"
+    },
+    {
+     "display": "Luis Cabrera Retamal Asesor",
+     "actual": "Luis Cabrera Retamal Asesor"
+    },
+    {
+     "display": "Luis Correa Asesor",
+     "actual": "Luis Correa Asesor"
+    },
+    {
+     "display": "Luis Hidalgo Asesor",
+     "actual": "Luis Hidalgo Asesor"
+    },
+    {
+     "display": "Manuel González Asesor",
+     "actual": "Manuel González Asesor"
+    },
+    {
+     "display": "Marcelo James Harmitton",
+     "actual": "Marcelo James Harmitton"
+    },
+    {
+     "display": "Marcelo Mocelli Asesor",
+     "actual": "Marcelo Mocelli Asesor"
+    },
+    {
+     "display": "Marco Antonio Ureta Asesor",
+     "actual": "Marco Antonio Ureta Asesor"
+    },
+    {
+     "display": "Marco Cornejo Asesor",
+     "actual": "Marco Cornejo Asesor"
+    },
+    {
+     "display": "Marcos Ponce Asesor",
+     "actual": "Marcos Ponce Asesor"
+    },
+    {
+     "display": "Maria Angelica Pérez Gallardo Asesora",
+     "actual": "Maria Angelica Pérez Gallardo Asesora"
+    },
+    {
+     "display": "Maria Susana Salazar Jara Asesora Financiak",
+     "actual": "Maria Susana Salazar Jara Asesora Financiak"
+    },
+    {
+     "display": "Mauricio Arancibia Rojas Asesor",
+     "actual": "Mauricio Arancibia Rojas Asesor"
+    },
+    {
+     "display": "Mauricio Coloma Asesor",
+     "actual": "Mauricio Coloma Asesor"
+    },
+    {
+     "display": "Mauricio Pérez Celedon Asesor",
+     "actual": "Mauricio Pérez Celedon Asesor"
+    },
+    {
+     "display": "Mauro Escobar Salgado",
+     "actual": "Mauro Escobar Salgado"
+    },
+    {
+     "display": "Oliver Diaz",
+     "actual": "Oliver Diaz"
+    },
+    {
+     "display": "Pablo Castro Asesor",
+     "actual": "Pablo Castro Asesor"
+    },
+    {
+     "display": "Pablo Mercado Asesor",
+     "actual": "Pablo Mercado Asesor"
+    },
+    {
+     "display": "Pablo Solís J.",
+     "actual": "Pablo Solís J."
+    },
+    {
+     "display": "Paola Rodríguez Fuentes Asesora",
+     "actual": "Paola Rodríguez Fuentes Asesora"
+    },
+    {
+     "display": "Paola Rojas Asesora",
+     "actual": "Paola Rojas Asesora"
+    },
+    {
+     "display": "Patricio Caceres Asesor Pinilla",
+     "actual": "Patricio Caceres Asesor Pinilla"
+    },
+    {
+     "display": "Patricio Herrera Asesor",
+     "actual": "Patricio Herrera Asesor"
+    },
+    {
+     "display": "Patricio Nuñez Asesor",
+     "actual": "Patricio Nuñez Asesor"
+    },
+    {
+     "display": "Paulina Ninoska Nuñez Asesora",
+     "actual": "Paulina Ninoska Nuñez Asesora"
+    },
+    {
+     "display": "Renato Eugenio Ezquerro carrillo Asesor",
+     "actual": "Renato Eugenio Ezquerro carrillo Asesor"
+    },
+    {
+     "display": "Richard Morales Asesor",
+     "actual": "Richard Morales Asesor"
+    },
+    {
+     "display": "Rita Solange Castro Gonzalez Asesor",
+     "actual": "Rita Solange Castro Gonzalez Asesor"
+    },
+    {
+     "display": "Roberto Fuentes Ramirez Asesor",
+     "actual": "Roberto Fuentes Ramirez Asesor"
+    },
+    {
+     "display": "Roberto González Caceres Asesor",
+     "actual": "Roberto González Caceres Asesor"
+    },
+    {
+     "display": "Rodrigo Garrido Alvear Asesor",
+     "actual": "Rodrigo Garrido Alvear Asesor"
+    },
+    {
+     "display": "Rosa Irene Basualto Yañez",
+     "actual": "Rosa Irene Basualto Yañez"
+    },
+    {
+     "display": "Sandra Dueñas Riffo Asesora",
+     "actual": "Sandra Dueñas Riffo Asesora"
+    },
+    {
+     "display": "Sebastián de Rementería Asesor",
+     "actual": "Sebastián de Rementería Asesor"
+    },
+    {
+     "display": "Sebastian Valenzuela Gil",
+     "actual": "Sebastian Valenzuela Gil"
+    },
+    {
+     "display": "Sergio Arcos Illanes Asesor",
+     "actual": "Sergio Arcos Illanes Asesor"
+    },
+    {
+     "display": "Victor Perez Cid Asesor",
+     "actual": "Victor Perez Cid Asesor"
+    },
+    {
+     "display": "Virginia Contreras",
+     "actual": "Virginia Contreras"
+    },
+    {
+     "display": "Firmado",
+     "actual": "Public Company"
+    },
+    {
+     "display": "Government",
+     "actual": "Government"
+    },
+    {
+     "display": "Inhabilitado",
+     "actual": "Other"
+    },
+    {
+     "display": "Partnership",
+     "actual": "Partnership"
+    },
+    {
+     "display": "Privately Held",
+     "actual": "Privately Held"
+    },
+    {
+     "display": "Público",
+     "actual": "Public"
+    },
+    {
+     "display": "Subsidiario",
+     "actual": "Subsidiary"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Industry",
+   "label": "Sub IB",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Mauricio Bucarey [ASP (Application Service Provider)]",
+    "Communications",
+    "Consulting",
+    "Education",
+    "Empresa grande [Large Enterprise]",
+    "Empresa pequeña/mediana [Small/Medium Enterprise]",
+    "Equipo de almacenamiento [Storage Equipment]",
+    "Equipos de redes empresa [Network Equipment (Enterprise)]",
+    "ERP (Planificación de recursos de empresa) [ERP (Enterprise Resource Planning)]",
+    "Financial Services",
+    "Gestión de redes ópticas [Optical Networking]",
+    "Gobierno/Ejército [Government/Military]",
+    "Integrador de sistemas [Systems Integrator]",
+    "ISV de gestión [ManagementISV]",
+    "ISV de no gestión [Non-management ISV]",
+    "Manufacturing",
+    "MSP (proveedor de servicios de gestión) [MSP (Management Service Provider)]",
+    "OEM de datos/telecom. [Data/Telecom OEM]",
+    "Proveedor de servicios [Service Provider]",
+    "Proveedor de servicios de almacenamiento [Storage Service Provider]",
+    "Real Estate",
+    "Sector de servicios inalámbricos [Wireless Industry]",
+    "Technology"
+   ],
+   "picklist_values": [
+    {
+     "display": "Mauricio Bucarey",
+     "actual": "ASP (Application Service Provider)"
+    },
+    {
+     "display": "Communications",
+     "actual": "Communications"
+    },
+    {
+     "display": "Consulting",
+     "actual": "Consulting"
+    },
+    {
+     "display": "Education",
+     "actual": "Education"
+    },
+    {
+     "display": "Empresa grande",
+     "actual": "Large Enterprise"
+    },
+    {
+     "display": "Empresa pequeña/mediana",
+     "actual": "Small/Medium Enterprise"
+    },
+    {
+     "display": "Equipo de almacenamiento",
+     "actual": "Storage Equipment"
+    },
+    {
+     "display": "Equipos de redes empresa",
+     "actual": "Network Equipment (Enterprise)"
+    },
+    {
+     "display": "ERP (Planificación de recursos de empresa)",
+     "actual": "ERP (Enterprise Resource Planning)"
+    },
+    {
+     "display": "Financial Services",
+     "actual": "Financial Services"
+    },
+    {
+     "display": "Gestión de redes ópticas",
+     "actual": "Optical Networking"
+    },
+    {
+     "display": "Gobierno/Ejército",
+     "actual": "Government/Military"
+    },
+    {
+     "display": "Integrador de sistemas",
+     "actual": "Systems Integrator"
+    },
+    {
+     "display": "ISV de gestión",
+     "actual": "ManagementISV"
+    },
+    {
+     "display": "ISV de no gestión",
+     "actual": "Non-management ISV"
+    },
+    {
+     "display": "Manufacturing",
+     "actual": "Manufacturing"
+    },
+    {
+     "display": "MSP (proveedor de servicios de gestión)",
+     "actual": "MSP (Management Service Provider)"
+    },
+    {
+     "display": "OEM de datos/telecom.",
+     "actual": "Data/Telecom OEM"
+    },
+    {
+     "display": "Proveedor de servicios",
+     "actual": "Service Provider"
+    },
+    {
+     "display": "Proveedor de servicios de almacenamiento",
+     "actual": "Storage Service Provider"
+    },
+    {
+     "display": "Real Estate",
+     "actual": "Real Estate"
+    },
+    {
+     "display": "Sector de servicios inalámbricos",
+     "actual": "Wireless Industry"
+    },
+    {
+     "display": "Technology",
+     "actual": "Technology"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Created_By",
+   "label": "Creado por",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Modified_By",
+   "label": "Modificado por",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Created_Time",
+   "label": "Hora de creación",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Modified_Time",
+   "label": "Hora de modificación",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Billing_Street",
+   "label": "Domicilio de facturación",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 250,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Shipping_Street",
+   "label": "Domicilio de envío",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 250,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Billing_City",
+   "label": "Ciudad de facturación",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Shipping_City",
+   "label": "Ciudad de envío",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Billing_State",
+   "label": "Estado de facturación",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Shipping_State",
+   "label": "Estado de envío",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Billing_Code",
+   "label": "Código de facturación",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 30,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Shipping_Code",
+   "label": "Código de envío",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 30,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Billing_Country",
+   "label": "País de facturación",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Shipping_Country",
+   "label": "País de envío",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Description",
+   "label": "Descripción",
+   "data_type": "textarea",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 32000,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Last_Activity_Time",
+   "label": "Hora de la última actividad",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Tag",
+   "label": "Etiqueta",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 2000,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Record_Image",
+   "label": "Imagen de Cuenta",
+   "data_type": "profileimage",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 255,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "id",
+   "label": "ID de registro",
+   "data_type": "bigint",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 18,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Change_Log_Time__s",
+   "label": "Cambiar hora de registro",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Locked__s",
+   "label": "Locked",
+   "data_type": "boolean",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 5,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Last_Enriched_Time__s",
+   "label": "Hora de último enriquecimiento de datos",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Enrich_Status__s",
+   "label": "Estado de enriquecimiento de datos",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Disponible [Available]",
+    "Enriched",
+    "Data not found"
+   ],
+   "picklist_values": [
+    {
+     "display": "Disponible",
+     "actual": "Available"
+    },
+    {
+     "display": "Enriched",
+     "actual": "Enriched"
+    },
+    {
+     "display": "Data not found",
+     "actual": "Data not found"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Analista_de_Inversiones",
+   "label": "Analista de Inversiones",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Diego Vargas",
+    "Hari Saits",
+    "Marcelo Henandez",
+    "Pendiente",
+    "Ricardo Perez",
+    "David Gomez",
+    "Camila Jofre",
+    "Camilo Bravo",
+    "Jose Quevedo",
+    "Lucas Justiniano"
+   ],
+   "picklist_values": [
+    {
+     "display": "Diego Vargas",
+     "actual": "Diego Vargas"
+    },
+    {
+     "display": "Hari Saits",
+     "actual": "Hari Saits"
+    },
+    {
+     "display": "Marcelo Henandez",
+     "actual": "Marcelo Henandez"
+    },
+    {
+     "display": "Pendiente",
+     "actual": "Pendiente"
+    },
+    {
+     "display": "Ricardo Perez",
+     "actual": "Ricardo Perez"
+    },
+    {
+     "display": "David Gomez",
+     "actual": "David Gomez"
+    },
+    {
+     "display": "Camila Jofre",
+     "actual": "Camila Jofre"
+    },
+    {
+     "display": "Camilo Bravo",
+     "actual": "Camilo Bravo"
+    },
+    {
+     "display": "Jose Quevedo",
+     "actual": "Jose Quevedo"
+    },
+    {
+     "display": "Lucas Justiniano",
+     "actual": "Lucas Justiniano"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Record_Status__s",
+   "label": "Record Status",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Trash",
+    "Available",
+    "Draft"
+   ],
+   "picklist_values": [
+    {
+     "display": "Trash",
+     "actual": "Trash"
+    },
+    {
+     "display": "Available",
+     "actual": "Available"
+    },
+    {
+     "display": "Draft",
+     "actual": "Draft"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Producto",
+   "label": "Producto",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Trading",
+    "Mutuo",
+    "AFI",
+    "Leaseback",
+    "Departamento",
+    "Financiamiento",
+    "IB"
+   ],
+   "picklist_values": [
+    {
+     "display": "Trading",
+     "actual": "Trading"
+    },
+    {
+     "display": "Mutuo",
+     "actual": "Mutuo"
+    },
+    {
+     "display": "AFI",
+     "actual": "AFI"
+    },
+    {
+     "display": "Leaseback",
+     "actual": "Leaseback"
+    },
+    {
+     "display": "Departamento",
+     "actual": "Departamento"
+    },
+    {
+     "display": "Financiamiento",
+     "actual": "Financiamiento"
+    },
+    {
+     "display": "IB",
+     "actual": "IB"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Ejecutivo_Junior",
+   "label": "Ejecutivo Junior",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "-",
+    "Marcelo Henandez",
+    "Johnny Felipe Hernandez",
+    "Felipe Norese",
+    "Rommy Leiva",
+    "Ricardo Perez",
+    "Estephany Garay",
+    "Alexander Chapanoff",
+    "Fernando Iturriaga",
+    "Valentina Alcaino",
+    "Fabiola Zegers",
+    "Andres Bilbao",
+    "Martin Franz",
+    "Franklin Patricio",
+    "Camila Flores",
+    "Marcos Arias",
+    "Rodrigo Quintana",
+    "Francisco Saavedra",
+    "Javiera Valderrama",
+    "Smiliak Zapata",
+    "Maximiliano Stein",
+    "Mauricio Rojas",
+    "Felipe Carrasco",
+    "Rodrigo Ubilla",
+    "Andrea Garrido",
+    "Camila Donoso",
+    "Cristobal Zapata",
+    "Daniela Guzman",
+    "Darlyn Herrera",
+    "Helmut Lammel",
+    "Jonathan Jara",
+    "Lucas Acuña",
+    "Maximiliano Garafulic",
+    "Montserrat Riquelme",
+    "Nikolete Jakubonyte",
+    "Pablo Velastin"
+   ],
+   "picklist_values": [
+    {
+     "display": "-",
+     "actual": "-"
+    },
+    {
+     "display": "Marcelo Henandez",
+     "actual": "Marcelo Henandez"
+    },
+    {
+     "display": "Johnny Felipe Hernandez",
+     "actual": "Johnny Felipe Hernandez"
+    },
+    {
+     "display": "Felipe Norese",
+     "actual": "Felipe Norese"
+    },
+    {
+     "display": "Rommy Leiva",
+     "actual": "Rommy Leiva"
+    },
+    {
+     "display": "Ricardo Perez",
+     "actual": "Ricardo Perez"
+    },
+    {
+     "display": "Estephany Garay",
+     "actual": "Estephany Garay"
+    },
+    {
+     "display": "Alexander Chapanoff",
+     "actual": "Alexander Chapanoff"
+    },
+    {
+     "display": "Fernando Iturriaga",
+     "actual": "Fernando Iturriaga"
+    },
+    {
+     "display": "Valentina Alcaino",
+     "actual": "Valentina Alcaino"
+    },
+    {
+     "display": "Fabiola Zegers",
+     "actual": "Fabiola Zegers"
+    },
+    {
+     "display": "Andres Bilbao",
+     "actual": "Andres Bilbao"
+    },
+    {
+     "display": "Martin Franz",
+     "actual": "Martin Franz"
+    },
+    {
+     "display": "Franklin Patricio",
+     "actual": "Franklin Patricio"
+    },
+    {
+     "display": "Camila Flores",
+     "actual": "Camila Flores"
+    },
+    {
+     "display": "Marcos Arias",
+     "actual": "Marcos Arias"
+    },
+    {
+     "display": "Rodrigo Quintana",
+     "actual": "Rodrigo Quintana"
+    },
+    {
+     "display": "Francisco Saavedra",
+     "actual": "Francisco Saavedra"
+    },
+    {
+     "display": "Javiera Valderrama",
+     "actual": "Javiera Valderrama"
+    },
+    {
+     "display": "Smiliak Zapata",
+     "actual": "Smiliak Zapata"
+    },
+    {
+     "display": "Maximiliano Stein",
+     "actual": "Maximiliano Stein"
+    },
+    {
+     "display": "Mauricio Rojas",
+     "actual": "Mauricio Rojas"
+    },
+    {
+     "display": "Felipe Carrasco",
+     "actual": "Felipe Carrasco"
+    },
+    {
+     "display": "Rodrigo Ubilla",
+     "actual": "Rodrigo Ubilla"
+    },
+    {
+     "display": "Andrea Garrido",
+     "actual": "Andrea Garrido"
+    },
+    {
+     "display": "Camila Donoso",
+     "actual": "Camila Donoso"
+    },
+    {
+     "display": "Cristobal Zapata",
+     "actual": "Cristobal Zapata"
+    },
+    {
+     "display": "Daniela Guzman",
+     "actual": "Daniela Guzman"
+    },
+    {
+     "display": "Darlyn Herrera",
+     "actual": "Darlyn Herrera"
+    },
+    {
+     "display": "Helmut Lammel",
+     "actual": "Helmut Lammel"
+    },
+    {
+     "display": "Jonathan Jara",
+     "actual": "Jonathan Jara"
+    },
+    {
+     "display": "Lucas Acuña",
+     "actual": "Lucas Acuña"
+    },
+    {
+     "display": "Maximiliano Garafulic",
+     "actual": "Maximiliano Garafulic"
+    },
+    {
+     "display": "Montserrat Riquelme",
+     "actual": "Montserrat Riquelme"
+    },
+    {
+     "display": "Nikolete Jakubonyte",
+     "actual": "Nikolete Jakubonyte"
+    },
+    {
+     "display": "Pablo Velastin",
+     "actual": "Pablo Velastin"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "IBs_Atributo",
+   "label": "Etapa del Cliente",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Deposito Recibido",
+    "Contratos Firmados [Archivado]",
+    "Credenciales Enviadas + Forms",
+    "Reversado a Ejecutivo",
+    "Validación Compliance",
+    "Habilitación de Cuenta",
+    "Traspaso a Post Venta",
+    "Avanzado",
+    "Inseguro",
+    "Referido"
+   ],
+   "picklist_values": [
+    {
+     "display": "Deposito Recibido",
+     "actual": "Deposito Recibido"
+    },
+    {
+     "display": "Contratos Firmados",
+     "actual": "Archivado"
+    },
+    {
+     "display": "Credenciales Enviadas + Forms",
+     "actual": "Credenciales Enviadas + Forms"
+    },
+    {
+     "display": "Reversado a Ejecutivo",
+     "actual": "Reversado a Ejecutivo"
+    },
+    {
+     "display": "Validación Compliance",
+     "actual": "Validación Compliance"
+    },
+    {
+     "display": "Habilitación de Cuenta",
+     "actual": "Habilitación de Cuenta"
+    },
+    {
+     "display": "Traspaso a Post Venta",
+     "actual": "Traspaso a Post Venta"
+    },
+    {
+     "display": "Avanzado",
+     "actual": "Avanzado"
+    },
+    {
+     "display": "Inseguro",
+     "actual": "Inseguro"
+    },
+    {
+     "display": "Referido",
+     "actual": "Referido"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "IBs",
+   "label": "IB Principal",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "No Corresponde",
+    "Patricio Gatica",
+    "Héctor Venegas",
+    "Patricio Olmos",
+    "Inversiones Monte Blanco SpA (Máximo Tapia)",
+    "Vicente Santander",
+    "Gustavo Cruzat",
+    "Arturo Sauma",
+    "Felipe Millar",
+    "Adolfo Delgado",
+    "Raúl Vidal",
+    "Jorge Garrido",
+    "Juan Gabriel Navarro",
+    "Dannette Ordoñez",
+    "Christian Tampe",
+    "Patricio Nannig",
+    "Scarlette Pacheco"
+   ],
+   "picklist_values": [
+    {
+     "display": "No Corresponde",
+     "actual": "No Corresponde"
+    },
+    {
+     "display": "Patricio Gatica",
+     "actual": "Patricio Gatica"
+    },
+    {
+     "display": "Héctor Venegas",
+     "actual": "Héctor Venegas"
+    },
+    {
+     "display": "Patricio Olmos",
+     "actual": "Patricio Olmos"
+    },
+    {
+     "display": "Inversiones Monte Blanco SpA (Máximo Tapia)",
+     "actual": "Inversiones Monte Blanco SpA (Máximo Tapia)"
+    },
+    {
+     "display": "Vicente Santander",
+     "actual": "Vicente Santander"
+    },
+    {
+     "display": "Gustavo Cruzat",
+     "actual": "Gustavo Cruzat"
+    },
+    {
+     "display": "Arturo Sauma",
+     "actual": "Arturo Sauma"
+    },
+    {
+     "display": "Felipe Millar",
+     "actual": "Felipe Millar"
+    },
+    {
+     "display": "Adolfo Delgado",
+     "actual": "Adolfo Delgado"
+    },
+    {
+     "display": "Raúl Vidal",
+     "actual": "Raúl Vidal"
+    },
+    {
+     "display": "Jorge Garrido",
+     "actual": "Jorge Garrido"
+    },
+    {
+     "display": "Juan Gabriel Navarro",
+     "actual": "Juan Gabriel Navarro"
+    },
+    {
+     "display": "Dannette Ordoñez",
+     "actual": "Dannette Ordoñez"
+    },
+    {
+     "display": "Christian Tampe",
+     "actual": "Christian Tampe"
+    },
+    {
+     "display": "Patricio Nannig",
+     "actual": "Patricio Nannig"
+    },
+    {
+     "display": "Scarlette Pacheco",
+     "actual": "Scarlette Pacheco"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "RUT",
+   "label": "RUT Cliente",
+   "data_type": "text",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 255,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Contrato_Mutuo",
+   "label": "Contrato Mutuo",
+   "data_type": "website",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 450,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Contrato_Cfd",
+   "label": "Contrato GI",
+   "data_type": "website",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 450,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Contrato_Afi",
+   "label": "Contrato AFI",
+   "data_type": "website",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 450,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Correo_Contacto",
+   "label": "Correo Contacto",
+   "data_type": "email",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  }
+ ]
+}

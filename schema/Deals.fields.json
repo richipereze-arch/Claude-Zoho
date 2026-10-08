@@ -1,0 +1,1316 @@
+{
+ "module": "Deals",
+ "layouts": [
+  {
+   "name": "Standard",
+   "id": "6839037000000091023",
+   "status": "active"
+  }
+ ],
+ "fields": [
+  {
+   "api_name": "Owner",
+   "label": "Propietario de Trato",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Amount",
+   "label": "Importe",
+   "data_type": "currency",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 16,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Deal_Name",
+   "label": "Nombre de Trato",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": true,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Closing_Date",
+   "label": "Fecha de cierre",
+   "data_type": "date",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 20,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Account_Name",
+   "label": "Nombre de Cuenta",
+   "data_type": "lookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": "Accounts",
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Stage",
+   "label": "Fase",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": true,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Clasificación [Qualification]",
+    "Necesita análisis [Needs Analysis]",
+    "Propuesta de valor [Value Proposition]",
+    "Identificar responsables [Id. Decision Makers]",
+    "Cotización de propuesta/precio [Proposal/Price Quote]",
+    "Negociación/revisión [Negotiation/Review]",
+    "Cerrado ganado [Closed Won]",
+    "Cerrado perdido [Closed Lost]",
+    "Perdido y cerrado para la competencia [Closed Lost to Competition]",
+    "Identify Decision Makers"
+   ],
+   "picklist_values": [
+    {
+     "display": "Clasificación",
+     "actual": "Qualification"
+    },
+    {
+     "display": "Necesita análisis",
+     "actual": "Needs Analysis"
+    },
+    {
+     "display": "Propuesta de valor",
+     "actual": "Value Proposition"
+    },
+    {
+     "display": "Identificar responsables",
+     "actual": "Id. Decision Makers"
+    },
+    {
+     "display": "Cotización de propuesta/precio",
+     "actual": "Proposal/Price Quote"
+    },
+    {
+     "display": "Negociación/revisión",
+     "actual": "Negotiation/Review"
+    },
+    {
+     "display": "Cerrado ganado",
+     "actual": "Closed Won"
+    },
+    {
+     "display": "Cerrado perdido",
+     "actual": "Closed Lost"
+    },
+    {
+     "display": "Perdido y cerrado para la competencia",
+     "actual": "Closed Lost to Competition"
+    },
+    {
+     "display": "Identify Decision Makers",
+     "actual": "Identify Decision Makers"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Type",
+   "label": "Tipo",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Negocios existentes [Existing Business]",
+    "Nuevo negocio [New Business]"
+   ],
+   "picklist_values": [
+    {
+     "display": "Negocios existentes",
+     "actual": "Existing Business"
+    },
+    {
+     "display": "Nuevo negocio",
+     "actual": "New Business"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Probability",
+   "label": "Probabilidad (%)",
+   "data_type": "integer",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 3,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Next_Step",
+   "label": "Siguiente paso",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Lead_Source",
+   "label": "Fuente de Posible cliente",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Aviso [Advertisement]",
+    "Llamada no solicitada [Cold Call]",
+    "Recomendación de empleado [Employee Referral]",
+    "Recomendación externa [External Referral]",
+    "Tienda en línea [OnlineStore]",
+    "Socio [Partner]",
+    "Relaciones públicas [Public Relations]",
+    "Alias del correo electrónico de ventas [Sales Mail Alias]",
+    "Socio de seminarios [Seminar Partner]",
+    "Seminario interno [Seminar-Internal]",
+    "Exposición comercial [Trade Show]",
+    "Descargar web [Web Download]",
+    "Investigación web [Web Research]",
+    "Chat"
+   ],
+   "picklist_values": [
+    {
+     "display": "Aviso",
+     "actual": "Advertisement"
+    },
+    {
+     "display": "Llamada no solicitada",
+     "actual": "Cold Call"
+    },
+    {
+     "display": "Recomendación de empleado",
+     "actual": "Employee Referral"
+    },
+    {
+     "display": "Recomendación externa",
+     "actual": "External Referral"
+    },
+    {
+     "display": "Tienda en línea",
+     "actual": "OnlineStore"
+    },
+    {
+     "display": "Socio",
+     "actual": "Partner"
+    },
+    {
+     "display": "Relaciones públicas",
+     "actual": "Public Relations"
+    },
+    {
+     "display": "Alias del correo electrónico de ventas",
+     "actual": "Sales Mail Alias"
+    },
+    {
+     "display": "Socio de seminarios",
+     "actual": "Seminar Partner"
+    },
+    {
+     "display": "Seminario interno",
+     "actual": "Seminar-Internal"
+    },
+    {
+     "display": "Exposición comercial",
+     "actual": "Trade Show"
+    },
+    {
+     "display": "Descargar web",
+     "actual": "Web Download"
+    },
+    {
+     "display": "Investigación web",
+     "actual": "Web Research"
+    },
+    {
+     "display": "Chat",
+     "actual": "Chat"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Campaign_Source",
+   "label": "Fuente de Campaña",
+   "data_type": "lookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": "Campaigns",
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Created_By",
+   "label": "Creado por",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Modified_By",
+   "label": "Modificado por",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Created_Time",
+   "label": "Hora de creación",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Modified_Time",
+   "label": "Hora de modificación",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Description",
+   "label": "Descripción",
+   "data_type": "textarea",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 32000,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Contact_Name",
+   "label": "Nombre de Contacto",
+   "data_type": "lookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": "Contacts",
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Expected_Revenue",
+   "label": "Ingresos esperados",
+   "data_type": "currency",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": true,
+   "length": 16,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Currency",
+   "label": "Moneda",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "CLP",
+    "USD"
+   ],
+   "picklist_values": [
+    {
+     "display": "CLP",
+     "actual": "CLP"
+    },
+    {
+     "display": "USD",
+     "actual": "USD"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Exchange_Rate",
+   "label": "Tasa de cambio",
+   "data_type": "double",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 19,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Last_Activity_Time",
+   "label": "Hora de la última actividad",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Lead_Conversion_Time",
+   "label": "Tiempo de conversión de Posible cliente",
+   "data_type": "integer",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 9,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Sales_Cycle_Duration",
+   "label": "Duración del ciclo de ventas",
+   "data_type": "integer",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 9,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Overall_Sales_Duration",
+   "label": "Duración total de las ventas",
+   "data_type": "integer",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 9,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Tag",
+   "label": "Etiqueta",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 2000,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "id",
+   "label": "ID de registro",
+   "data_type": "bigint",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 18,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Change_Log_Time__s",
+   "label": "Cambiar hora de registro",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Locked__s",
+   "label": "Locked",
+   "data_type": "boolean",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 5,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Reason_For_Loss__s",
+   "label": "Motivo de la pérdida",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Discrepancia de expectativa [Expectation Mismatch]",
+    "Precio [Price]",
+    "Cliente no cualificado [Unqualified Customer]",
+    "Falta de respuesta [Lack of response]",
+    "Seguimientos perdidos [Missed Follow Ups]",
+    "Objetivo incorrecto [Wrong Target]",
+    "Competencia [Competition]",
+    "Interés futuro [Future Interest]",
+    "Otro [Other]"
+   ],
+   "picklist_values": [
+    {
+     "display": "Discrepancia de expectativa",
+     "actual": "Expectation Mismatch"
+    },
+    {
+     "display": "Precio",
+     "actual": "Price"
+    },
+    {
+     "display": "Cliente no cualificado",
+     "actual": "Unqualified Customer"
+    },
+    {
+     "display": "Falta de respuesta",
+     "actual": "Lack of response"
+    },
+    {
+     "display": "Seguimientos perdidos",
+     "actual": "Missed Follow Ups"
+    },
+    {
+     "display": "Objetivo incorrecto",
+     "actual": "Wrong Target"
+    },
+    {
+     "display": "Competencia",
+     "actual": "Competition"
+    },
+    {
+     "display": "Interés futuro",
+     "actual": "Future Interest"
+    },
+    {
+     "display": "Otro",
+     "actual": "Other"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Record_Status__s",
+   "label": "Record Status",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Trash",
+    "Available",
+    "Draft"
+   ],
+   "picklist_values": [
+    {
+     "display": "Trash",
+     "actual": "Trash"
+    },
+    {
+     "display": "Available",
+     "actual": "Available"
+    },
+    {
+     "display": "Draft",
+     "actual": "Draft"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Producto",
+   "label": "Producto",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Trading",
+    "Mutuo",
+    "AFI",
+    "Leaseback",
+    "Departamento",
+    "Financiamiento"
+   ],
+   "picklist_values": [
+    {
+     "display": "Trading",
+     "actual": "Trading"
+    },
+    {
+     "display": "Mutuo",
+     "actual": "Mutuo"
+    },
+    {
+     "display": "AFI",
+     "actual": "AFI"
+    },
+    {
+     "display": "Leaseback",
+     "actual": "Leaseback"
+    },
+    {
+     "display": "Departamento",
+     "actual": "Departamento"
+    },
+    {
+     "display": "Financiamiento",
+     "actual": "Financiamiento"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Ejecutivo_Junior",
+   "label": "Ejecutivo Junior",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Marcelo Henandez",
+    "Jonathan Jara",
+    "Helmut Lammel",
+    "Johnny Felipe Hernandez",
+    "Felipe Norese",
+    "Rommy Leiva",
+    "Ricardo Perez",
+    "Cristobal Zapata",
+    "Camila Donoso",
+    "Pablo Velastin",
+    "Estephany Garay",
+    "Montserrat Riquelme",
+    "Darlyn Herrera",
+    "Alexander Chapanoff",
+    "Lucas Acuña",
+    "Nikolete Jakubonyte",
+    "Fernando Iturriaga",
+    "Valentina Alcaino",
+    "Fabiola Zegers",
+    "Andres Bilbao",
+    "Andrea Garrido",
+    "Daniela Guzman",
+    "Maximiliano Garafulic"
+   ],
+   "picklist_values": [
+    {
+     "display": "Marcelo Henandez",
+     "actual": "Marcelo Henandez"
+    },
+    {
+     "display": "Jonathan Jara",
+     "actual": "Jonathan Jara"
+    },
+    {
+     "display": "Helmut Lammel",
+     "actual": "Helmut Lammel"
+    },
+    {
+     "display": "Johnny Felipe Hernandez",
+     "actual": "Johnny Felipe Hernandez"
+    },
+    {
+     "display": "Felipe Norese",
+     "actual": "Felipe Norese"
+    },
+    {
+     "display": "Rommy Leiva",
+     "actual": "Rommy Leiva"
+    },
+    {
+     "display": "Ricardo Perez",
+     "actual": "Ricardo Perez"
+    },
+    {
+     "display": "Cristobal Zapata",
+     "actual": "Cristobal Zapata"
+    },
+    {
+     "display": "Camila Donoso",
+     "actual": "Camila Donoso"
+    },
+    {
+     "display": "Pablo Velastin",
+     "actual": "Pablo Velastin"
+    },
+    {
+     "display": "Estephany Garay",
+     "actual": "Estephany Garay"
+    },
+    {
+     "display": "Montserrat Riquelme",
+     "actual": "Montserrat Riquelme"
+    },
+    {
+     "display": "Darlyn Herrera",
+     "actual": "Darlyn Herrera"
+    },
+    {
+     "display": "Alexander Chapanoff",
+     "actual": "Alexander Chapanoff"
+    },
+    {
+     "display": "Lucas Acuña",
+     "actual": "Lucas Acuña"
+    },
+    {
+     "display": "Nikolete Jakubonyte",
+     "actual": "Nikolete Jakubonyte"
+    },
+    {
+     "display": "Fernando Iturriaga",
+     "actual": "Fernando Iturriaga"
+    },
+    {
+     "display": "Valentina Alcaino",
+     "actual": "Valentina Alcaino"
+    },
+    {
+     "display": "Fabiola Zegers",
+     "actual": "Fabiola Zegers"
+    },
+    {
+     "display": "Andres Bilbao",
+     "actual": "Andres Bilbao"
+    },
+    {
+     "display": "Andrea Garrido",
+     "actual": "Andrea Garrido"
+    },
+    {
+     "display": "Daniela Guzman",
+     "actual": "Daniela Guzman"
+    },
+    {
+     "display": "Maximiliano Garafulic",
+     "actual": "Maximiliano Garafulic"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "IBs",
+   "label": "IBs",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Patricio Gatica",
+    "Patricio Olmos",
+    "Inversiones Monte Blanco SpA (Máximo Tapia)",
+    "Vicente Santander",
+    "Arturo Sauma",
+    "Adolfo Delgado",
+    "Gustavo Cruzat",
+    "Hector Venegas",
+    "Felipe Millar",
+    "Raúl Vidal",
+    "Jorge Garrido",
+    "Christian Tampe"
+   ],
+   "picklist_values": [
+    {
+     "display": "Patricio Gatica",
+     "actual": "Patricio Gatica"
+    },
+    {
+     "display": "Patricio Olmos",
+     "actual": "Patricio Olmos"
+    },
+    {
+     "display": "Inversiones Monte Blanco SpA (Máximo Tapia)",
+     "actual": "Inversiones Monte Blanco SpA (Máximo Tapia)"
+    },
+    {
+     "display": "Vicente Santander",
+     "actual": "Vicente Santander"
+    },
+    {
+     "display": "Arturo Sauma",
+     "actual": "Arturo Sauma"
+    },
+    {
+     "display": "Adolfo Delgado",
+     "actual": "Adolfo Delgado"
+    },
+    {
+     "display": "Gustavo Cruzat",
+     "actual": "Gustavo Cruzat"
+    },
+    {
+     "display": "Hector Venegas",
+     "actual": "Hector Venegas"
+    },
+    {
+     "display": "Felipe Millar",
+     "actual": "Felipe Millar"
+    },
+    {
+     "display": "Raúl Vidal",
+     "actual": "Raúl Vidal"
+    },
+    {
+     "display": "Jorge Garrido",
+     "actual": "Jorge Garrido"
+    },
+    {
+     "display": "Christian Tampe",
+     "actual": "Christian Tampe"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Comprobante_Deposito_Transferencia",
+   "label": "Comprobante Deposito / Transferencia",
+   "data_type": "fileupload",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 5,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": "Se cargas el comprobante de deposito, transferencia, vale vista o instrumento que uso para la carga de su capital",
+   "in_layout": true
+  },
+  {
+   "api_name": "Analista_de_Inversiones",
+   "label": "Analista de Inversiones",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Lucas Justiniano",
+    "Camilo Bravo",
+    "Diego Vargas",
+    "Jose Quevedo",
+    "Hari Saits",
+    "Marcelo Henandez",
+    "Ricardo Perez",
+    "Camila Jofre",
+    "David Gomez"
+   ],
+   "picklist_values": [
+    {
+     "display": "Lucas Justiniano",
+     "actual": "Lucas Justiniano"
+    },
+    {
+     "display": "Camilo Bravo",
+     "actual": "Camilo Bravo"
+    },
+    {
+     "display": "Diego Vargas",
+     "actual": "Diego Vargas"
+    },
+    {
+     "display": "Jose Quevedo",
+     "actual": "Jose Quevedo"
+    },
+    {
+     "display": "Hari Saits",
+     "actual": "Hari Saits"
+    },
+    {
+     "display": "Marcelo Henandez",
+     "actual": "Marcelo Henandez"
+    },
+    {
+     "display": "Ricardo Perez",
+     "actual": "Ricardo Perez"
+    },
+    {
+     "display": "Camila Jofre",
+     "actual": "Camila Jofre"
+    },
+    {
+     "display": "David Gomez",
+     "actual": "David Gomez"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Comprobante_Rescate",
+   "label": "Comprobante Rescate",
+   "data_type": "fileupload",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 1,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "leadchain0__Social_Lead_ID",
+   "label": "Social Lead ID",
+   "data_type": "text",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 150,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Deal",
+   "label": "Deal",
+   "data_type": "integer",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 9,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Administrador_Externo",
+   "label": "Administrador Externo",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Camilo Bravo"
+   ],
+   "picklist_values": [
+    {
+     "display": "Camilo Bravo",
+     "actual": "Camilo Bravo"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Stage_Modified_Time",
+   "label": "Hora de modificación de fase",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Sub_IB_s",
+   "label": "Sub IB´s",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Mauricio Bucarey"
+   ],
+   "picklist_values": [
+    {
+     "display": "Mauricio Bucarey",
+     "actual": "Mauricio Bucarey"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  }
+ ]
+}

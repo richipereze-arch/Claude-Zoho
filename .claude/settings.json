@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "deny": [
+      "mcp__Zoho_CRM__deleteRecord",
+      "mcp__Zoho_CRM__deleteRecords",
+      "mcp__Zoho_CRM__deleteNotesModule",
+      "mcp__Zoho_CRM__delinkSpecificRelatedRecord",
+      "mcp__Zoho_CRM__createFields",
+      "mcp__Zoho_CRM__updateUser",
+      "mcp__Zoho_CRM__updateSingleUser",
+      "mcp__Zoho_CRM__updateVariableById",
+      "mcp__Zoho_CRM__convertInventory"
+    ],
+    "ask": [
+      "mcp__Zoho_CRM__createRecords",
+      "mcp__Zoho_CRM__updateRecord",
+      "mcp__Zoho_CRM__updateRecords",
+      "mcp__Zoho_CRM__upsertRecords",
+      "mcp__Zoho_CRM__updateRelatedRecords",
+      "mcp__Zoho_CRM__updateSpecificRelatedRecord",
+      "mcp__Zoho_CRM__createNotesModule",
+      "mcp__Zoho_CRM__updateNotesModule",
+      "mcp__Zoho_CRM__createTags",
+      "mcp__Zoho_CRM__postAddTags"
+    ]
+  }
+}

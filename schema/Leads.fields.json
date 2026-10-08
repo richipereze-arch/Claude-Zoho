@@ -1,0 +1,4171 @@
+{
+ "module": "Leads",
+ "layouts": [
+  {
+   "name": "Standard",
+   "id": "6839037000000091055",
+   "status": "active"
+  }
+ ],
+ "fields": [
+  {
+   "api_name": "Owner",
+   "label": "Propietario de Posible Cliente",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Company",
+   "label": "Nombre Cuenta",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 200,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Last_Name",
+   "label": "Nombre Completo",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": true,
+   "layout_mandatory": true,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 80,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Email",
+   "label": "Correo electrónico",
+   "data_type": "email",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Phone",
+   "label": "Teléfono",
+   "data_type": "phone",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 30,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Mobile",
+   "label": "Móvil",
+   "data_type": "phone",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 30,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Website",
+   "label": "Drive",
+   "data_type": "website",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 255,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Lead_Source",
+   "label": "Fuente de Posible cliente",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Aviso [Advertisement]",
+    "Llamada no solicitada [Cold Call]",
+    "Recomendación de empleado [Employee Referral]",
+    "Recomendación externa [External Referral]",
+    "Tienda en línea [OnlineStore]",
+    "X (Twitter) [Twitter]",
+    "Facebook",
+    "Socio [Partner]",
+    "Relaciones públicas [Public Relations]",
+    "Alias del correo electrónico de ventas [Sales Mail Alias]",
+    "Socio de seminarios [Seminar Partner]",
+    "Seminario interno [Seminar-Internal]",
+    "Exposición comercial [Trade Show]",
+    "Descargar web [Web Download]",
+    "Investigación web [Web Research]",
+    "Chat",
+    "Online Store"
+   ],
+   "picklist_values": [
+    {
+     "display": "Aviso",
+     "actual": "Advertisement"
+    },
+    {
+     "display": "Llamada no solicitada",
+     "actual": "Cold Call"
+    },
+    {
+     "display": "Recomendación de empleado",
+     "actual": "Employee Referral"
+    },
+    {
+     "display": "Recomendación externa",
+     "actual": "External Referral"
+    },
+    {
+     "display": "Tienda en línea",
+     "actual": "OnlineStore"
+    },
+    {
+     "display": "X (Twitter)",
+     "actual": "Twitter"
+    },
+    {
+     "display": "Facebook",
+     "actual": "Facebook"
+    },
+    {
+     "display": "Socio",
+     "actual": "Partner"
+    },
+    {
+     "display": "Relaciones públicas",
+     "actual": "Public Relations"
+    },
+    {
+     "display": "Alias del correo electrónico de ventas",
+     "actual": "Sales Mail Alias"
+    },
+    {
+     "display": "Socio de seminarios",
+     "actual": "Seminar Partner"
+    },
+    {
+     "display": "Seminario interno",
+     "actual": "Seminar-Internal"
+    },
+    {
+     "display": "Exposición comercial",
+     "actual": "Trade Show"
+    },
+    {
+     "display": "Descargar web",
+     "actual": "Web Download"
+    },
+    {
+     "display": "Investigación web",
+     "actual": "Web Research"
+    },
+    {
+     "display": "Chat",
+     "actual": "Chat"
+    },
+    {
+     "display": "Online Store",
+     "actual": "Online Store"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Lead_Status",
+   "label": "Estado de Posible cliente",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Intento de contacto [Attempted to Contact]",
+    "Contactar en el futuro [Contact in Future]",
+    "Contactado [Contacted]",
+    "Posible cliente no solicitado [Junk Lead]",
+    "Posible cliente perdido [Lost Lead]",
+    "No contactado [Not Contacted]",
+    "Previamente clasificado [Pre-Qualified]",
+    "No habilitado [Not Qualified]"
+   ],
+   "picklist_values": [
+    {
+     "display": "Intento de contacto",
+     "actual": "Attempted to Contact"
+    },
+    {
+     "display": "Contactar en el futuro",
+     "actual": "Contact in Future"
+    },
+    {
+     "display": "Contactado",
+     "actual": "Contacted"
+    },
+    {
+     "display": "Posible cliente no solicitado",
+     "actual": "Junk Lead"
+    },
+    {
+     "display": "Posible cliente perdido",
+     "actual": "Lost Lead"
+    },
+    {
+     "display": "No contactado",
+     "actual": "Not Contacted"
+    },
+    {
+     "display": "Previamente clasificado",
+     "actual": "Pre-Qualified"
+    },
+    {
+     "display": "No habilitado",
+     "actual": "Not Qualified"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Industry",
+   "label": "Sub IB´s",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Mauricio Bucarey",
+    "ASP (Proveedor de servicios de aplicaciones) [ASP (Application Service Provider)]",
+    "Empresa grande [Large Enterprise]",
+    "Empresa pequeña/mediana [Small/Medium Enterprise]",
+    "Equipo de almacenamiento [Storage Equipment]",
+    "Equipos de redes empresa [Network Equipment (Enterprise)]",
+    "ERP",
+    "ERP (Planificación de recursos de empresa) [ERP (Enterprise Resource Planning)]",
+    "Gestión de redes ópticas [Optical Networking]",
+    "Gobierno/Ejército [Government/Military]",
+    "Integrador de sistemas [Systems Integrator]",
+    "ISV de gestión [ManagementISV]",
+    "ISV de no gestión [Non-management ISV]",
+    "Management ISV",
+    "MSP (proveedor de servicios de gestión) [MSP (Management Service Provider)]",
+    "OEM de datos/telecom. [Data/Telecom OEM]",
+    "Proveedor de servicios [Service Provider]",
+    "Proveedor de servicios de almacenamiento [Storage Service Provider]",
+    "Sector de servicios inalámbricos [Wireless Industry]"
+   ],
+   "picklist_values": [
+    {
+     "display": "Mauricio Bucarey",
+     "actual": "Mauricio Bucarey"
+    },
+    {
+     "display": "ASP (Proveedor de servicios de aplicaciones)",
+     "actual": "ASP (Application Service Provider)"
+    },
+    {
+     "display": "Empresa grande",
+     "actual": "Large Enterprise"
+    },
+    {
+     "display": "Empresa pequeña/mediana",
+     "actual": "Small/Medium Enterprise"
+    },
+    {
+     "display": "Equipo de almacenamiento",
+     "actual": "Storage Equipment"
+    },
+    {
+     "display": "Equipos de redes empresa",
+     "actual": "Network Equipment (Enterprise)"
+    },
+    {
+     "display": "ERP",
+     "actual": "ERP"
+    },
+    {
+     "display": "ERP (Planificación de recursos de empresa)",
+     "actual": "ERP (Enterprise Resource Planning)"
+    },
+    {
+     "display": "Gestión de redes ópticas",
+     "actual": "Optical Networking"
+    },
+    {
+     "display": "Gobierno/Ejército",
+     "actual": "Government/Military"
+    },
+    {
+     "display": "Integrador de sistemas",
+     "actual": "Systems Integrator"
+    },
+    {
+     "display": "ISV de gestión",
+     "actual": "ManagementISV"
+    },
+    {
+     "display": "ISV de no gestión",
+     "actual": "Non-management ISV"
+    },
+    {
+     "display": "Management ISV",
+     "actual": "Management ISV"
+    },
+    {
+     "display": "MSP (proveedor de servicios de gestión)",
+     "actual": "MSP (Management Service Provider)"
+    },
+    {
+     "display": "OEM de datos/telecom.",
+     "actual": "Data/Telecom OEM"
+    },
+    {
+     "display": "Proveedor de servicios",
+     "actual": "Service Provider"
+    },
+    {
+     "display": "Proveedor de servicios de almacenamiento",
+     "actual": "Storage Service Provider"
+    },
+    {
+     "display": "Sector de servicios inalámbricos",
+     "actual": "Wireless Industry"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "No_of_Employees",
+   "label": "Cantidad de empleados",
+   "data_type": "integer",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 9,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Annual_Revenue",
+   "label": "Ingresos anuales",
+   "data_type": "currency",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 16,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Rating",
+   "label": "Calificación FK",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Interesado en Financiamiento [Acquired]",
+    "Diferido en Financiamiento [Active]",
+    "Archivado en Financiamiento [Market Failed]",
+    "No Ubicable en Financiamiento [Project Cancelled]",
+    "No Califica en Financiamiento [ShutDown]",
+    "No Interesado en Financiamiento"
+   ],
+   "picklist_values": [
+    {
+     "display": "Interesado en Financiamiento",
+     "actual": "Acquired"
+    },
+    {
+     "display": "Diferido en Financiamiento",
+     "actual": "Active"
+    },
+    {
+     "display": "Archivado en Financiamiento",
+     "actual": "Market Failed"
+    },
+    {
+     "display": "No Ubicable en Financiamiento",
+     "actual": "Project Cancelled"
+    },
+    {
+     "display": "No Califica en Financiamiento",
+     "actual": "ShutDown"
+    },
+    {
+     "display": "No Interesado en Financiamiento",
+     "actual": "No Interesado en Financiamiento"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Created_By",
+   "label": "Creado por",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Modified_By",
+   "label": "Modificado por",
+   "data_type": "ownerlookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Created_Time",
+   "label": "Hora de creación",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Modified_Time",
+   "label": "Hora de modificación",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Full_Name",
+   "label": "Nombre completo",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Street",
+   "label": "Calle",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 250,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "City",
+   "label": "Ciudad",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "State",
+   "label": "Estado/Provincia",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Zip_Code",
+   "label": "Código postal",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 30,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Country",
+   "label": "País",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Description",
+   "label": "Descripción",
+   "data_type": "textarea",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 32000,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Email_Opt_Out",
+   "label": "No participación del correo electrónico",
+   "data_type": "boolean",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 5,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Secondary_Email",
+   "label": "Correo electrónico secundario",
+   "data_type": "email",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 100,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Currency",
+   "label": "Moneda",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "CLP",
+    "USD"
+   ],
+   "picklist_values": [
+    {
+     "display": "CLP",
+     "actual": "CLP"
+    },
+    {
+     "display": "USD",
+     "actual": "USD"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Exchange_Rate",
+   "label": "Tasa de cambio",
+   "data_type": "double",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 19,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Last_Activity_Time",
+   "label": "Hora de la última actividad",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Tag",
+   "label": "Etiqueta",
+   "data_type": "text",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 2000,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Record_Image",
+   "label": "Imagen de Posible cliente",
+   "data_type": "profileimage",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 255,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Converted_Date_Time",
+   "label": "Fecha y hora convertida",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Lead_Conversion_Time",
+   "label": "Tiempo de conversión de Posible cliente",
+   "data_type": "integer",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 9,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Unsubscribed_Mode",
+   "label": "Modalidad de cancelación de suscripción",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Formulario de consentimiento [Consent form]",
+    "Manual",
+    "Enlace de cancelación de suscripción [Unsubscribe link]",
+    "Zoho Campaigns [Zoho campaigns]"
+   ],
+   "picklist_values": [
+    {
+     "display": "Formulario de consentimiento",
+     "actual": "Consent form"
+    },
+    {
+     "display": "Manual",
+     "actual": "Manual"
+    },
+    {
+     "display": "Enlace de cancelación de suscripción",
+     "actual": "Unsubscribe link"
+    },
+    {
+     "display": "Zoho Campaigns",
+     "actual": "Zoho campaigns"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Unsubscribed_Time",
+   "label": "Hora de cancelación de suscripción",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Converted_Account",
+   "label": "Cuenta convertida",
+   "data_type": "lookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": "Accounts",
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Converted_Contact",
+   "label": "Contacto convertido",
+   "data_type": "lookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": "Contacts",
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Converted_Deal",
+   "label": "Transacción convertida",
+   "data_type": "lookup",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": "Deals",
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "id",
+   "label": "ID de registro",
+   "data_type": "bigint",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 18,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Change_Log_Time__s",
+   "label": "Cambiar hora de registro",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Converted__s",
+   "label": "se ha convertido",
+   "data_type": "boolean",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 5,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Locked__s",
+   "label": "Locked",
+   "data_type": "boolean",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 5,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Last_Enriched_Time__s",
+   "label": "Hora de último enriquecimiento de datos",
+   "data_type": "datetime",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Enrich_Status__s",
+   "label": "Estado de enriquecimiento de datos",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": false,
+   "read_only": true,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Disponible [Available]",
+    "Enriched",
+    "Data not found"
+   ],
+   "picklist_values": [
+    {
+     "display": "Disponible",
+     "actual": "Available"
+    },
+    {
+     "display": "Enriched",
+     "actual": "Enriched"
+    },
+    {
+     "display": "Data not found",
+     "actual": "Data not found"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Analista_de_Inversiones",
+   "label": "Analista de Inversiones",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Lucas Justiniano",
+    "Camilo Bravo",
+    "Jose Quevedo",
+    "Diego Vargas",
+    "Hari Saits",
+    "Marcelo Henandez",
+    "Ricardo Perez",
+    "Camila Jofre",
+    "David Gomez"
+   ],
+   "picklist_values": [
+    {
+     "display": "Lucas Justiniano",
+     "actual": "Lucas Justiniano"
+    },
+    {
+     "display": "Camilo Bravo",
+     "actual": "Camilo Bravo"
+    },
+    {
+     "display": "Jose Quevedo",
+     "actual": "Jose Quevedo"
+    },
+    {
+     "display": "Diego Vargas",
+     "actual": "Diego Vargas"
+    },
+    {
+     "display": "Hari Saits",
+     "actual": "Hari Saits"
+    },
+    {
+     "display": "Marcelo Henandez",
+     "actual": "Marcelo Henandez"
+    },
+    {
+     "display": "Ricardo Perez",
+     "actual": "Ricardo Perez"
+    },
+    {
+     "display": "Camila Jofre",
+     "actual": "Camila Jofre"
+    },
+    {
+     "display": "David Gomez",
+     "actual": "David Gomez"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Record_Status__s",
+   "label": "Record Status",
+   "data_type": "picklist",
+   "custom": false,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Trash",
+    "Available",
+    "Draft"
+   ],
+   "picklist_values": [
+    {
+     "display": "Trash",
+     "actual": "Trash"
+    },
+    {
+     "display": "Available",
+     "actual": "Available"
+    },
+    {
+     "display": "Draft",
+     "actual": "Draft"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Atributo_del_Prospecto",
+   "label": "Atributo del Prospecto",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Interesado",
+    "Diferido",
+    "Archivado",
+    "No Interesado",
+    "No Califica",
+    "No Ubicable",
+    "Marketing",
+    "Broker",
+    "Teléfono Malo",
+    "Proceso de Cierre",
+    "Desistio",
+    "Enviar Simulación",
+    "Simulación Enviada",
+    "Recopilación de documentos",
+    "Presentar a comité",
+    "Comité aprueba - EETT",
+    "Comité no aprueba",
+    "Enviado a EETT",
+    "Borradores Listos",
+    "Firmado",
+    "Inbound",
+    "Monto Menor",
+    "Sin Tasación Comercial"
+   ],
+   "picklist_values": [
+    {
+     "display": "Interesado",
+     "actual": "Interesado"
+    },
+    {
+     "display": "Diferido",
+     "actual": "Diferido"
+    },
+    {
+     "display": "Archivado",
+     "actual": "Archivado"
+    },
+    {
+     "display": "No Interesado",
+     "actual": "No Interesado"
+    },
+    {
+     "display": "No Califica",
+     "actual": "No Califica"
+    },
+    {
+     "display": "No Ubicable",
+     "actual": "No Ubicable"
+    },
+    {
+     "display": "Marketing",
+     "actual": "Marketing"
+    },
+    {
+     "display": "Broker",
+     "actual": "Broker"
+    },
+    {
+     "display": "Teléfono Malo",
+     "actual": "Teléfono Malo"
+    },
+    {
+     "display": "Proceso de Cierre",
+     "actual": "Proceso de Cierre"
+    },
+    {
+     "display": "Desistio",
+     "actual": "Desistio"
+    },
+    {
+     "display": "Enviar Simulación",
+     "actual": "Enviar Simulación"
+    },
+    {
+     "display": "Simulación Enviada",
+     "actual": "Simulación Enviada"
+    },
+    {
+     "display": "Recopilación de documentos",
+     "actual": "Recopilación de documentos"
+    },
+    {
+     "display": "Presentar a comité",
+     "actual": "Presentar a comité"
+    },
+    {
+     "display": "Comité aprueba - EETT",
+     "actual": "Comité aprueba - EETT"
+    },
+    {
+     "display": "Comité no aprueba",
+     "actual": "Comité no aprueba"
+    },
+    {
+     "display": "Enviado a EETT",
+     "actual": "Enviado a EETT"
+    },
+    {
+     "display": "Borradores Listos",
+     "actual": "Borradores Listos"
+    },
+    {
+     "display": "Firmado",
+     "actual": "Firmado"
+    },
+    {
+     "display": "Inbound",
+     "actual": "Inbound"
+    },
+    {
+     "display": "Monto Menor",
+     "actual": "Monto Menor"
+    },
+    {
+     "display": "Sin Tasación Comercial",
+     "actual": "Sin Tasación Comercial"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Producto",
+   "label": "Producto",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "-",
+    "Trading",
+    "Mutuo",
+    "AFI",
+    "Leaseback",
+    "Departamento",
+    "Financiamiento",
+    "Venta Propiedad",
+    "IB"
+   ],
+   "picklist_values": [
+    {
+     "display": "-",
+     "actual": "-"
+    },
+    {
+     "display": "Trading",
+     "actual": "Trading"
+    },
+    {
+     "display": "Mutuo",
+     "actual": "Mutuo"
+    },
+    {
+     "display": "AFI",
+     "actual": "AFI"
+    },
+    {
+     "display": "Leaseback",
+     "actual": "Leaseback"
+    },
+    {
+     "display": "Departamento",
+     "actual": "Departamento"
+    },
+    {
+     "display": "Financiamiento",
+     "actual": "Financiamiento"
+    },
+    {
+     "display": "Venta Propiedad",
+     "actual": "Venta Propiedad"
+    },
+    {
+     "display": "IB",
+     "actual": "IB"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Ejecutivo_Junior",
+   "label": "Ejecutivo Junior",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "-",
+    "Rommy Leiva",
+    "Ricardo Perez",
+    "Cristobal Zapata",
+    "Estephany Garay",
+    "Diego Vargas",
+    "Fernando Iturriaga",
+    "Mauricio Díaz Méndez",
+    "Andres Bilbao",
+    "Marcos Arias",
+    "Martin Franz",
+    "Rodrigo Quintana",
+    "Francisco Saavedra",
+    "Maximiliano Stein",
+    "Mauricio Rojas",
+    "Felipe Carrasco",
+    "Rodrigo Ubilla",
+    "Camila Jofre",
+    "David Gomez",
+    "Gonzalo Muñoz",
+    "Constanza Meza",
+    "NO ASIGNADO",
+    "Alexander Chapanoff",
+    "Andrea Garrido",
+    "Camila Donoso",
+    "Camila Flores",
+    "Daniela Guzman",
+    "Darlyn Herrera",
+    "Diego Larraín Tapia",
+    "Fabiola Zegers",
+    "Felipe Norese",
+    "Franklin Patricio",
+    "Helmut Lammel",
+    "Javiera Valderrama",
+    "Johnny Felipe Hernandez",
+    "Jonathan Jara",
+    "Lucas Acuña",
+    "Marcelo Hernandez [Marcelo Henandez]",
+    "Maximiliano Garafulic",
+    "Montserrat Riquelme",
+    "Nikolete Jakubonyte",
+    "Pablo Velastin",
+    "Smiliak Zapata",
+    "Valentina Alcaino"
+   ],
+   "picklist_values": [
+    {
+     "display": "-",
+     "actual": "-"
+    },
+    {
+     "display": "Rommy Leiva",
+     "actual": "Rommy Leiva"
+    },
+    {
+     "display": "Ricardo Perez",
+     "actual": "Ricardo Perez"
+    },
+    {
+     "display": "Cristobal Zapata",
+     "actual": "Cristobal Zapata"
+    },
+    {
+     "display": "Estephany Garay",
+     "actual": "Estephany Garay"
+    },
+    {
+     "display": "Diego Vargas",
+     "actual": "Diego Vargas"
+    },
+    {
+     "display": "Fernando Iturriaga",
+     "actual": "Fernando Iturriaga"
+    },
+    {
+     "display": "Mauricio Díaz Méndez",
+     "actual": "Mauricio Díaz Méndez"
+    },
+    {
+     "display": "Andres Bilbao",
+     "actual": "Andres Bilbao"
+    },
+    {
+     "display": "Marcos Arias",
+     "actual": "Marcos Arias"
+    },
+    {
+     "display": "Martin Franz",
+     "actual": "Martin Franz"
+    },
+    {
+     "display": "Rodrigo Quintana",
+     "actual": "Rodrigo Quintana"
+    },
+    {
+     "display": "Francisco Saavedra",
+     "actual": "Francisco Saavedra"
+    },
+    {
+     "display": "Maximiliano Stein",
+     "actual": "Maximiliano Stein"
+    },
+    {
+     "display": "Mauricio Rojas",
+     "actual": "Mauricio Rojas"
+    },
+    {
+     "display": "Felipe Carrasco",
+     "actual": "Felipe Carrasco"
+    },
+    {
+     "display": "Rodrigo Ubilla",
+     "actual": "Rodrigo Ubilla"
+    },
+    {
+     "display": "Camila Jofre",
+     "actual": "Camila Jofre"
+    },
+    {
+     "display": "David Gomez",
+     "actual": "David Gomez"
+    },
+    {
+     "display": "Gonzalo Muñoz",
+     "actual": "Gonzalo Muñoz"
+    },
+    {
+     "display": "Constanza Meza",
+     "actual": "Constanza Meza"
+    },
+    {
+     "display": "NO ASIGNADO",
+     "actual": "NO ASIGNADO"
+    },
+    {
+     "display": "Alexander Chapanoff",
+     "actual": "Alexander Chapanoff"
+    },
+    {
+     "display": "Andrea Garrido",
+     "actual": "Andrea Garrido"
+    },
+    {
+     "display": "Camila Donoso",
+     "actual": "Camila Donoso"
+    },
+    {
+     "display": "Camila Flores",
+     "actual": "Camila Flores"
+    },
+    {
+     "display": "Daniela Guzman",
+     "actual": "Daniela Guzman"
+    },
+    {
+     "display": "Darlyn Herrera",
+     "actual": "Darlyn Herrera"
+    },
+    {
+     "display": "Diego Larraín Tapia",
+     "actual": "Diego Larraín Tapia"
+    },
+    {
+     "display": "Fabiola Zegers",
+     "actual": "Fabiola Zegers"
+    },
+    {
+     "display": "Felipe Norese",
+     "actual": "Felipe Norese"
+    },
+    {
+     "display": "Franklin Patricio",
+     "actual": "Franklin Patricio"
+    },
+    {
+     "display": "Helmut Lammel",
+     "actual": "Helmut Lammel"
+    },
+    {
+     "display": "Javiera Valderrama",
+     "actual": "Javiera Valderrama"
+    },
+    {
+     "display": "Johnny Felipe Hernandez",
+     "actual": "Johnny Felipe Hernandez"
+    },
+    {
+     "display": "Jonathan Jara",
+     "actual": "Jonathan Jara"
+    },
+    {
+     "display": "Lucas Acuña",
+     "actual": "Lucas Acuña"
+    },
+    {
+     "display": "Marcelo Hernandez",
+     "actual": "Marcelo Henandez"
+    },
+    {
+     "display": "Maximiliano Garafulic",
+     "actual": "Maximiliano Garafulic"
+    },
+    {
+     "display": "Montserrat Riquelme",
+     "actual": "Montserrat Riquelme"
+    },
+    {
+     "display": "Nikolete Jakubonyte",
+     "actual": "Nikolete Jakubonyte"
+    },
+    {
+     "display": "Pablo Velastin",
+     "actual": "Pablo Velastin"
+    },
+    {
+     "display": "Smiliak Zapata",
+     "actual": "Smiliak Zapata"
+    },
+    {
+     "display": "Valentina Alcaino",
+     "actual": "Valentina Alcaino"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "IBs",
+   "label": "IBs",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Patricio Gatica",
+    "Héctor Venegas",
+    "Patricio Olmos",
+    "Inversiones Monte Blanco SpA (Máximo Tapia)",
+    "Vicente Santander",
+    "Gustavo Cruzat",
+    "Felipe Millar",
+    "Hector Venegas",
+    "Arturo Sauma",
+    "Adolfo Delgado",
+    "Raúl Vidal",
+    "Jorge Garrido",
+    "Dannette Ordoñez",
+    "Aldo Antonucci",
+    "Juan Gabriel Navarro",
+    "Christian Tampe",
+    "Patricio Nannig",
+    "Scarlette Pacheco"
+   ],
+   "picklist_values": [
+    {
+     "display": "Patricio Gatica",
+     "actual": "Patricio Gatica"
+    },
+    {
+     "display": "Héctor Venegas",
+     "actual": "Héctor Venegas"
+    },
+    {
+     "display": "Patricio Olmos",
+     "actual": "Patricio Olmos"
+    },
+    {
+     "display": "Inversiones Monte Blanco SpA (Máximo Tapia)",
+     "actual": "Inversiones Monte Blanco SpA (Máximo Tapia)"
+    },
+    {
+     "display": "Vicente Santander",
+     "actual": "Vicente Santander"
+    },
+    {
+     "display": "Gustavo Cruzat",
+     "actual": "Gustavo Cruzat"
+    },
+    {
+     "display": "Felipe Millar",
+     "actual": "Felipe Millar"
+    },
+    {
+     "display": "Hector Venegas",
+     "actual": "Hector Venegas"
+    },
+    {
+     "display": "Arturo Sauma",
+     "actual": "Arturo Sauma"
+    },
+    {
+     "display": "Adolfo Delgado",
+     "actual": "Adolfo Delgado"
+    },
+    {
+     "display": "Raúl Vidal",
+     "actual": "Raúl Vidal"
+    },
+    {
+     "display": "Jorge Garrido",
+     "actual": "Jorge Garrido"
+    },
+    {
+     "display": "Dannette Ordoñez",
+     "actual": "Dannette Ordoñez"
+    },
+    {
+     "display": "Aldo Antonucci",
+     "actual": "Aldo Antonucci"
+    },
+    {
+     "display": "Juan Gabriel Navarro",
+     "actual": "Juan Gabriel Navarro"
+    },
+    {
+     "display": "Christian Tampe",
+     "actual": "Christian Tampe"
+    },
+    {
+     "display": "Patricio Nannig",
+     "actual": "Patricio Nannig"
+    },
+    {
+     "display": "Scarlette Pacheco",
+     "actual": "Scarlette Pacheco"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Producto_2",
+   "label": "Producto 2",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Trading",
+    "Mutuo",
+    "AFI",
+    "Leaseback",
+    "Departamento",
+    "Financiamiento",
+    "IB",
+    "Venta Propiedad"
+   ],
+   "picklist_values": [
+    {
+     "display": "Trading",
+     "actual": "Trading"
+    },
+    {
+     "display": "Mutuo",
+     "actual": "Mutuo"
+    },
+    {
+     "display": "AFI",
+     "actual": "AFI"
+    },
+    {
+     "display": "Leaseback",
+     "actual": "Leaseback"
+    },
+    {
+     "display": "Departamento",
+     "actual": "Departamento"
+    },
+    {
+     "display": "Financiamiento",
+     "actual": "Financiamiento"
+    },
+    {
+     "display": "IB",
+     "actual": "IB"
+    },
+    {
+     "display": "Venta Propiedad",
+     "actual": "Venta Propiedad"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Comuna_Ciudad",
+   "label": "Comuna / Ciudad",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Alto Hospicio",
+    "Iquique",
+    "Huara",
+    "Camiña",
+    "Colchane",
+    "Pica",
+    "Pozo Almonte",
+    "Tocopilla",
+    "María Elena",
+    "Calama",
+    "Ollagüe",
+    "San Pedro de Atacama",
+    "Antofagasta",
+    "Mejillones",
+    "Sierra Gorda",
+    "Taltal",
+    "Chañaral",
+    "Diego de Almagro",
+    "Copiapó",
+    "Caldera",
+    "Tierra Amarilla",
+    "Vallenar",
+    "Freirina",
+    "Huasco",
+    "Alto del Carmen",
+    "La Serena",
+    "La Higuera",
+    "Coquimbo",
+    "Andacollo",
+    "Vicuña",
+    "Paihuano",
+    "Ovalle",
+    "Río Hurtado",
+    "Monte Patria",
+    "Combarbalá",
+    "Punitaqui",
+    "Illapel",
+    "Salamanca",
+    "Los Vilos",
+    "Canela",
+    "La Ligua",
+    "Petorca",
+    "Cabildo",
+    "Zapallar",
+    "Papudo",
+    "Los Andes",
+    "San Esteban",
+    "Calle Larga",
+    "Rinconada",
+    "San Felipe",
+    "Putaendo",
+    "Santa María",
+    "Panquehue",
+    "Llaillay",
+    "Catemu",
+    "Quillota",
+    "La Cruz",
+    "Calera",
+    "Nogales",
+    "Hijuelas",
+    "Limache",
+    "Olmué",
+    "Valparaíso",
+    "Viña del Mar",
+    "Quintero",
+    "Puchuncaví",
+    "Quilpué",
+    "Villa Alemana",
+    "Casablanca",
+    "Concón",
+    "Juan Fernández",
+    "San Antonio",
+    "Cartagena",
+    "El Tabo",
+    "El Quisco",
+    "Algarrobo",
+    "Santo Domingo",
+    "Isla de Pascua",
+    "Rancagua",
+    "Graneros",
+    "Mostazal",
+    "Codegua",
+    "Machalí",
+    "Olivar",
+    "Requinoa",
+    "Rengo",
+    "Malloa",
+    "Quinta de Tilcoco",
+    "San Vicente",
+    "Pichidegua",
+    "Peumo",
+    "Coltauco",
+    "Coinco",
+    "Doñihue",
+    "Las Cabras",
+    "San Fernando",
+    "Chimbarongo",
+    "Placilla",
+    "Nancagua",
+    "Chépica",
+    "Santa Cruz",
+    "Lolol",
+    "Pumanque",
+    "Palmilla",
+    "Peralillo",
+    "Pichilemu",
+    "Navidad",
+    "Litueche",
+    "La Estrella",
+    "Marchihue",
+    "Paredones",
+    "Curicó",
+    "Teno",
+    "Romeral",
+    "Molina",
+    "Sagrada Familia",
+    "Hualañé",
+    "Licantén",
+    "Vichuquén",
+    "Rauco",
+    "Talca",
+    "Pelarco",
+    "Río Claro",
+    "San Clemente",
+    "Maule",
+    "San Rafael",
+    "Empedrado",
+    "Pencahue",
+    "Constitución",
+    "Curepto",
+    "Linares",
+    "Yerbas Buenas",
+    "Colbún",
+    "Longaví",
+    "Parral",
+    "Retiro",
+    "Villa Alegre",
+    "San Javier",
+    "Cauquenes",
+    "Pelluhue",
+    "Chanco",
+    "Chillán",
+    "San Carlos",
+    "Ñiquén",
+    "San Fabián",
+    "Coihueco",
+    "Pinto",
+    "San Ignacio",
+    "El Carmen",
+    "Yungay",
+    "Pemuco",
+    "Bulnes",
+    "Quillón",
+    "Ránquil",
+    "Portezuelo",
+    "Coelemu",
+    "Treguaco",
+    "Cobquecura",
+    "Quirihue",
+    "Ninhue",
+    "San Nicolás",
+    "Chillán Viejo",
+    "Alto Biobío",
+    "Los Angeles",
+    "Cabrero",
+    "Tucapel",
+    "Antuco",
+    "Quilleco",
+    "Santa Bárbara",
+    "Quilaco",
+    "Mulchén",
+    "Negrete",
+    "Nacimiento",
+    "Laja",
+    "San Rosendo",
+    "Yumbel",
+    "Concepción",
+    "Talcahuano",
+    "Penco",
+    "Tomé",
+    "Florida",
+    "Hualpén",
+    "Hualqui",
+    "Santa Juana",
+    "Lota",
+    "Coronel",
+    "San Pedro de la Paz",
+    "Chiguayante",
+    "Lebu",
+    "Arauco",
+    "Curanilahue",
+    "Los Alamos",
+    "Cañete",
+    "Contulmo",
+    "Tirua",
+    "Angol",
+    "Renaico",
+    "Collipulli",
+    "Lonquimay",
+    "Curacautín",
+    "Ercilla",
+    "Victoria",
+    "Traiguén",
+    "Lumaco",
+    "Purén",
+    "Los Sauces",
+    "Temuco",
+    "Lautaro",
+    "Perquenco",
+    "Vilcún",
+    "Cholchol",
+    "Cunco",
+    "Melipeuco",
+    "Curarrehue",
+    "Pucón",
+    "Villarrica",
+    "Freire",
+    "Pitrufquén",
+    "Gorbea",
+    "Loncoche",
+    "Toltén",
+    "Teodoro Schmidt",
+    "Saavedra",
+    "Carahue",
+    "Nueva Imperial",
+    "Galvarino",
+    "Padre las Casas",
+    "Valdivia",
+    "Mariquina",
+    "Lanco",
+    "Máfil",
+    "Corral",
+    "Los Lagos",
+    "Panguipulli",
+    "Paillaco",
+    "La Unión",
+    "Futrono",
+    "Río Bueno",
+    "Lago Ranco",
+    "Osorno",
+    "San Pablo",
+    "Puyehue",
+    "Puerto Octay",
+    "Purranque",
+    "Río Negro",
+    "San Juan de la Costa",
+    "Puerto Montt",
+    "Puerto Varas",
+    "Cochamó",
+    "Calbuco",
+    "Maullín",
+    "Los Muermos",
+    "Fresia",
+    "Llanquihue",
+    "Frutillar",
+    "Castro",
+    "Ancud",
+    "Quemchi",
+    "Dalcahue",
+    "Curaco de Vélez",
+    "Quinchao",
+    "Puqueldón",
+    "Chonchi",
+    "Queilén",
+    "Quellón",
+    "Chaitén",
+    "Hualaihué",
+    "Futaleufú",
+    "Palena",
+    "Coyhaique",
+    "Lago Verde",
+    "Aysén",
+    "Cisnes",
+    "Guaitecas",
+    "Chile Chico",
+    "Río Ibánez",
+    "Cochrane",
+    "O'Higgins",
+    "Tortel",
+    "Natales",
+    "Torres del Paine",
+    "Punta Arenas",
+    "Río Verde",
+    "Laguna Blanca",
+    "San Gregorio",
+    "Porvenir",
+    "Primavera",
+    "Timaukel",
+    "Cabo de Hornos",
+    "Antártica",
+    "Santiago",
+    "Independencia",
+    "Conchalí",
+    "Huechuraba",
+    "Recoleta",
+    "Providencia",
+    "Vitacura",
+    "Lo Barnechea",
+    "Las Condes",
+    "Ñuñoa",
+    "La Reina",
+    "Macul",
+    "Peñalolén",
+    "La Florida",
+    "San Joaquín",
+    "La Granja",
+    "La Pintana",
+    "San Ramón",
+    "San Miguel",
+    "La Cisterna",
+    "El Bosque",
+    "Pedro Aguirre Cerda",
+    "Lo Espejo",
+    "Estación Central",
+    "Cerrillos",
+    "Maipú",
+    "Quinta Normal",
+    "Lo Prado",
+    "Pudahuel",
+    "Cerro Navia",
+    "Renca",
+    "Quilicura",
+    "Colina",
+    "Lampa",
+    "Tiltil",
+    "Puente Alto",
+    "San José de Maipo",
+    "Pirque",
+    "San Bernardo",
+    "Buin",
+    "Paine",
+    "Calera de Tango",
+    "Melipilla",
+    "María Pinto",
+    "Curacaví",
+    "Alhué",
+    "San Pedro",
+    "Talagante",
+    "Peñaflor",
+    "Isla de Maipo",
+    "El Monte",
+    "Padre Hurtado"
+   ],
+   "picklist_values": [
+    {
+     "display": "Alto Hospicio",
+     "actual": "Alto Hospicio"
+    },
+    {
+     "display": "Iquique",
+     "actual": "Iquique"
+    },
+    {
+     "display": "Huara",
+     "actual": "Huara"
+    },
+    {
+     "display": "Camiña",
+     "actual": "Camiña"
+    },
+    {
+     "display": "Colchane",
+     "actual": "Colchane"
+    },
+    {
+     "display": "Pica",
+     "actual": "Pica"
+    },
+    {
+     "display": "Pozo Almonte",
+     "actual": "Pozo Almonte"
+    },
+    {
+     "display": "Tocopilla",
+     "actual": "Tocopilla"
+    },
+    {
+     "display": "María Elena",
+     "actual": "María Elena"
+    },
+    {
+     "display": "Calama",
+     "actual": "Calama"
+    },
+    {
+     "display": "Ollagüe",
+     "actual": "Ollagüe"
+    },
+    {
+     "display": "San Pedro de Atacama",
+     "actual": "San Pedro de Atacama"
+    },
+    {
+     "display": "Antofagasta",
+     "actual": "Antofagasta"
+    },
+    {
+     "display": "Mejillones",
+     "actual": "Mejillones"
+    },
+    {
+     "display": "Sierra Gorda",
+     "actual": "Sierra Gorda"
+    },
+    {
+     "display": "Taltal",
+     "actual": "Taltal"
+    },
+    {
+     "display": "Chañaral",
+     "actual": "Chañaral"
+    },
+    {
+     "display": "Diego de Almagro",
+     "actual": "Diego de Almagro"
+    },
+    {
+     "display": "Copiapó",
+     "actual": "Copiapó"
+    },
+    {
+     "display": "Caldera",
+     "actual": "Caldera"
+    },
+    {
+     "display": "Tierra Amarilla",
+     "actual": "Tierra Amarilla"
+    },
+    {
+     "display": "Vallenar",
+     "actual": "Vallenar"
+    },
+    {
+     "display": "Freirina",
+     "actual": "Freirina"
+    },
+    {
+     "display": "Huasco",
+     "actual": "Huasco"
+    },
+    {
+     "display": "Alto del Carmen",
+     "actual": "Alto del Carmen"
+    },
+    {
+     "display": "La Serena",
+     "actual": "La Serena"
+    },
+    {
+     "display": "La Higuera",
+     "actual": "La Higuera"
+    },
+    {
+     "display": "Coquimbo",
+     "actual": "Coquimbo"
+    },
+    {
+     "display": "Andacollo",
+     "actual": "Andacollo"
+    },
+    {
+     "display": "Vicuña",
+     "actual": "Vicuña"
+    },
+    {
+     "display": "Paihuano",
+     "actual": "Paihuano"
+    },
+    {
+     "display": "Ovalle",
+     "actual": "Ovalle"
+    },
+    {
+     "display": "Río Hurtado",
+     "actual": "Río Hurtado"
+    },
+    {
+     "display": "Monte Patria",
+     "actual": "Monte Patria"
+    },
+    {
+     "display": "Combarbalá",
+     "actual": "Combarbalá"
+    },
+    {
+     "display": "Punitaqui",
+     "actual": "Punitaqui"
+    },
+    {
+     "display": "Illapel",
+     "actual": "Illapel"
+    },
+    {
+     "display": "Salamanca",
+     "actual": "Salamanca"
+    },
+    {
+     "display": "Los Vilos",
+     "actual": "Los Vilos"
+    },
+    {
+     "display": "Canela",
+     "actual": "Canela"
+    },
+    {
+     "display": "La Ligua",
+     "actual": "La Ligua"
+    },
+    {
+     "display": "Petorca",
+     "actual": "Petorca"
+    },
+    {
+     "display": "Cabildo",
+     "actual": "Cabildo"
+    },
+    {
+     "display": "Zapallar",
+     "actual": "Zapallar"
+    },
+    {
+     "display": "Papudo",
+     "actual": "Papudo"
+    },
+    {
+     "display": "Los Andes",
+     "actual": "Los Andes"
+    },
+    {
+     "display": "San Esteban",
+     "actual": "San Esteban"
+    },
+    {
+     "display": "Calle Larga",
+     "actual": "Calle Larga"
+    },
+    {
+     "display": "Rinconada",
+     "actual": "Rinconada"
+    },
+    {
+     "display": "San Felipe",
+     "actual": "San Felipe"
+    },
+    {
+     "display": "Putaendo",
+     "actual": "Putaendo"
+    },
+    {
+     "display": "Santa María",
+     "actual": "Santa María"
+    },
+    {
+     "display": "Panquehue",
+     "actual": "Panquehue"
+    },
+    {
+     "display": "Llaillay",
+     "actual": "Llaillay"
+    },
+    {
+     "display": "Catemu",
+     "actual": "Catemu"
+    },
+    {
+     "display": "Quillota",
+     "actual": "Quillota"
+    },
+    {
+     "display": "La Cruz",
+     "actual": "La Cruz"
+    },
+    {
+     "display": "Calera",
+     "actual": "Calera"
+    },
+    {
+     "display": "Nogales",
+     "actual": "Nogales"
+    },
+    {
+     "display": "Hijuelas",
+     "actual": "Hijuelas"
+    },
+    {
+     "display": "Limache",
+     "actual": "Limache"
+    },
+    {
+     "display": "Olmué",
+     "actual": "Olmué"
+    },
+    {
+     "display": "Valparaíso",
+     "actual": "Valparaíso"
+    },
+    {
+     "display": "Viña del Mar",
+     "actual": "Viña del Mar"
+    },
+    {
+     "display": "Quintero",
+     "actual": "Quintero"
+    },
+    {
+     "display": "Puchuncaví",
+     "actual": "Puchuncaví"
+    },
+    {
+     "display": "Quilpué",
+     "actual": "Quilpué"
+    },
+    {
+     "display": "Villa Alemana",
+     "actual": "Villa Alemana"
+    },
+    {
+     "display": "Casablanca",
+     "actual": "Casablanca"
+    },
+    {
+     "display": "Concón",
+     "actual": "Concón"
+    },
+    {
+     "display": "Juan Fernández",
+     "actual": "Juan Fernández"
+    },
+    {
+     "display": "San Antonio",
+     "actual": "San Antonio"
+    },
+    {
+     "display": "Cartagena",
+     "actual": "Cartagena"
+    },
+    {
+     "display": "El Tabo",
+     "actual": "El Tabo"
+    },
+    {
+     "display": "El Quisco",
+     "actual": "El Quisco"
+    },
+    {
+     "display": "Algarrobo",
+     "actual": "Algarrobo"
+    },
+    {
+     "display": "Santo Domingo",
+     "actual": "Santo Domingo"
+    },
+    {
+     "display": "Isla de Pascua",
+     "actual": "Isla de Pascua"
+    },
+    {
+     "display": "Rancagua",
+     "actual": "Rancagua"
+    },
+    {
+     "display": "Graneros",
+     "actual": "Graneros"
+    },
+    {
+     "display": "Mostazal",
+     "actual": "Mostazal"
+    },
+    {
+     "display": "Codegua",
+     "actual": "Codegua"
+    },
+    {
+     "display": "Machalí",
+     "actual": "Machalí"
+    },
+    {
+     "display": "Olivar",
+     "actual": "Olivar"
+    },
+    {
+     "display": "Requinoa",
+     "actual": "Requinoa"
+    },
+    {
+     "display": "Rengo",
+     "actual": "Rengo"
+    },
+    {
+     "display": "Malloa",
+     "actual": "Malloa"
+    },
+    {
+     "display": "Quinta de Tilcoco",
+     "actual": "Quinta de Tilcoco"
+    },
+    {
+     "display": "San Vicente",
+     "actual": "San Vicente"
+    },
+    {
+     "display": "Pichidegua",
+     "actual": "Pichidegua"
+    },
+    {
+     "display": "Peumo",
+     "actual": "Peumo"
+    },
+    {
+     "display": "Coltauco",
+     "actual": "Coltauco"
+    },
+    {
+     "display": "Coinco",
+     "actual": "Coinco"
+    },
+    {
+     "display": "Doñihue",
+     "actual": "Doñihue"
+    },
+    {
+     "display": "Las Cabras",
+     "actual": "Las Cabras"
+    },
+    {
+     "display": "San Fernando",
+     "actual": "San Fernando"
+    },
+    {
+     "display": "Chimbarongo",
+     "actual": "Chimbarongo"
+    },
+    {
+     "display": "Placilla",
+     "actual": "Placilla"
+    },
+    {
+     "display": "Nancagua",
+     "actual": "Nancagua"
+    },
+    {
+     "display": "Chépica",
+     "actual": "Chépica"
+    },
+    {
+     "display": "Santa Cruz",
+     "actual": "Santa Cruz"
+    },
+    {
+     "display": "Lolol",
+     "actual": "Lolol"
+    },
+    {
+     "display": "Pumanque",
+     "actual": "Pumanque"
+    },
+    {
+     "display": "Palmilla",
+     "actual": "Palmilla"
+    },
+    {
+     "display": "Peralillo",
+     "actual": "Peralillo"
+    },
+    {
+     "display": "Pichilemu",
+     "actual": "Pichilemu"
+    },
+    {
+     "display": "Navidad",
+     "actual": "Navidad"
+    },
+    {
+     "display": "Litueche",
+     "actual": "Litueche"
+    },
+    {
+     "display": "La Estrella",
+     "actual": "La Estrella"
+    },
+    {
+     "display": "Marchihue",
+     "actual": "Marchihue"
+    },
+    {
+     "display": "Paredones",
+     "actual": "Paredones"
+    },
+    {
+     "display": "Curicó",
+     "actual": "Curicó"
+    },
+    {
+     "display": "Teno",
+     "actual": "Teno"
+    },
+    {
+     "display": "Romeral",
+     "actual": "Romeral"
+    },
+    {
+     "display": "Molina",
+     "actual": "Molina"
+    },
+    {
+     "display": "Sagrada Familia",
+     "actual": "Sagrada Familia"
+    },
+    {
+     "display": "Hualañé",
+     "actual": "Hualañé"
+    },
+    {
+     "display": "Licantén",
+     "actual": "Licantén"
+    },
+    {
+     "display": "Vichuquén",
+     "actual": "Vichuquén"
+    },
+    {
+     "display": "Rauco",
+     "actual": "Rauco"
+    },
+    {
+     "display": "Talca",
+     "actual": "Talca"
+    },
+    {
+     "display": "Pelarco",
+     "actual": "Pelarco"
+    },
+    {
+     "display": "Río Claro",
+     "actual": "Río Claro"
+    },
+    {
+     "display": "San Clemente",
+     "actual": "San Clemente"
+    },
+    {
+     "display": "Maule",
+     "actual": "Maule"
+    },
+    {
+     "display": "San Rafael",
+     "actual": "San Rafael"
+    },
+    {
+     "display": "Empedrado",
+     "actual": "Empedrado"
+    },
+    {
+     "display": "Pencahue",
+     "actual": "Pencahue"
+    },
+    {
+     "display": "Constitución",
+     "actual": "Constitución"
+    },
+    {
+     "display": "Curepto",
+     "actual": "Curepto"
+    },
+    {
+     "display": "Linares",
+     "actual": "Linares"
+    },
+    {
+     "display": "Yerbas Buenas",
+     "actual": "Yerbas Buenas"
+    },
+    {
+     "display": "Colbún",
+     "actual": "Colbún"
+    },
+    {
+     "display": "Longaví",
+     "actual": "Longaví"
+    },
+    {
+     "display": "Parral",
+     "actual": "Parral"
+    },
+    {
+     "display": "Retiro",
+     "actual": "Retiro"
+    },
+    {
+     "display": "Villa Alegre",
+     "actual": "Villa Alegre"
+    },
+    {
+     "display": "San Javier",
+     "actual": "San Javier"
+    },
+    {
+     "display": "Cauquenes",
+     "actual": "Cauquenes"
+    },
+    {
+     "display": "Pelluhue",
+     "actual": "Pelluhue"
+    },
+    {
+     "display": "Chanco",
+     "actual": "Chanco"
+    },
+    {
+     "display": "Chillán",
+     "actual": "Chillán"
+    },
+    {
+     "display": "San Carlos",
+     "actual": "San Carlos"
+    },
+    {
+     "display": "Ñiquén",
+     "actual": "Ñiquén"
+    },
+    {
+     "display": "San Fabián",
+     "actual": "San Fabián"
+    },
+    {
+     "display": "Coihueco",
+     "actual": "Coihueco"
+    },
+    {
+     "display": "Pinto",
+     "actual": "Pinto"
+    },
+    {
+     "display": "San Ignacio",
+     "actual": "San Ignacio"
+    },
+    {
+     "display": "El Carmen",
+     "actual": "El Carmen"
+    },
+    {
+     "display": "Yungay",
+     "actual": "Yungay"
+    },
+    {
+     "display": "Pemuco",
+     "actual": "Pemuco"
+    },
+    {
+     "display": "Bulnes",
+     "actual": "Bulnes"
+    },
+    {
+     "display": "Quillón",
+     "actual": "Quillón"
+    },
+    {
+     "display": "Ránquil",
+     "actual": "Ránquil"
+    },
+    {
+     "display": "Portezuelo",
+     "actual": "Portezuelo"
+    },
+    {
+     "display": "Coelemu",
+     "actual": "Coelemu"
+    },
+    {
+     "display": "Treguaco",
+     "actual": "Treguaco"
+    },
+    {
+     "display": "Cobquecura",
+     "actual": "Cobquecura"
+    },
+    {
+     "display": "Quirihue",
+     "actual": "Quirihue"
+    },
+    {
+     "display": "Ninhue",
+     "actual": "Ninhue"
+    },
+    {
+     "display": "San Nicolás",
+     "actual": "San Nicolás"
+    },
+    {
+     "display": "Chillán Viejo",
+     "actual": "Chillán Viejo"
+    },
+    {
+     "display": "Alto Biobío",
+     "actual": "Alto Biobío"
+    },
+    {
+     "display": "Los Angeles",
+     "actual": "Los Angeles"
+    },
+    {
+     "display": "Cabrero",
+     "actual": "Cabrero"
+    },
+    {
+     "display": "Tucapel",
+     "actual": "Tucapel"
+    },
+    {
+     "display": "Antuco",
+     "actual": "Antuco"
+    },
+    {
+     "display": "Quilleco",
+     "actual": "Quilleco"
+    },
+    {
+     "display": "Santa Bárbara",
+     "actual": "Santa Bárbara"
+    },
+    {
+     "display": "Quilaco",
+     "actual": "Quilaco"
+    },
+    {
+     "display": "Mulchén",
+     "actual": "Mulchén"
+    },
+    {
+     "display": "Negrete",
+     "actual": "Negrete"
+    },
+    {
+     "display": "Nacimiento",
+     "actual": "Nacimiento"
+    },
+    {
+     "display": "Laja",
+     "actual": "Laja"
+    },
+    {
+     "display": "San Rosendo",
+     "actual": "San Rosendo"
+    },
+    {
+     "display": "Yumbel",
+     "actual": "Yumbel"
+    },
+    {
+     "display": "Concepción",
+     "actual": "Concepción"
+    },
+    {
+     "display": "Talcahuano",
+     "actual": "Talcahuano"
+    },
+    {
+     "display": "Penco",
+     "actual": "Penco"
+    },
+    {
+     "display": "Tomé",
+     "actual": "Tomé"
+    },
+    {
+     "display": "Florida",
+     "actual": "Florida"
+    },
+    {
+     "display": "Hualpén",
+     "actual": "Hualpén"
+    },
+    {
+     "display": "Hualqui",
+     "actual": "Hualqui"
+    },
+    {
+     "display": "Santa Juana",
+     "actual": "Santa Juana"
+    },
+    {
+     "display": "Lota",
+     "actual": "Lota"
+    },
+    {
+     "display": "Coronel",
+     "actual": "Coronel"
+    },
+    {
+     "display": "San Pedro de la Paz",
+     "actual": "San Pedro de la Paz"
+    },
+    {
+     "display": "Chiguayante",
+     "actual": "Chiguayante"
+    },
+    {
+     "display": "Lebu",
+     "actual": "Lebu"
+    },
+    {
+     "display": "Arauco",
+     "actual": "Arauco"
+    },
+    {
+     "display": "Curanilahue",
+     "actual": "Curanilahue"
+    },
+    {
+     "display": "Los Alamos",
+     "actual": "Los Alamos"
+    },
+    {
+     "display": "Cañete",
+     "actual": "Cañete"
+    },
+    {
+     "display": "Contulmo",
+     "actual": "Contulmo"
+    },
+    {
+     "display": "Tirua",
+     "actual": "Tirua"
+    },
+    {
+     "display": "Angol",
+     "actual": "Angol"
+    },
+    {
+     "display": "Renaico",
+     "actual": "Renaico"
+    },
+    {
+     "display": "Collipulli",
+     "actual": "Collipulli"
+    },
+    {
+     "display": "Lonquimay",
+     "actual": "Lonquimay"
+    },
+    {
+     "display": "Curacautín",
+     "actual": "Curacautín"
+    },
+    {
+     "display": "Ercilla",
+     "actual": "Ercilla"
+    },
+    {
+     "display": "Victoria",
+     "actual": "Victoria"
+    },
+    {
+     "display": "Traiguén",
+     "actual": "Traiguén"
+    },
+    {
+     "display": "Lumaco",
+     "actual": "Lumaco"
+    },
+    {
+     "display": "Purén",
+     "actual": "Purén"
+    },
+    {
+     "display": "Los Sauces",
+     "actual": "Los Sauces"
+    },
+    {
+     "display": "Temuco",
+     "actual": "Temuco"
+    },
+    {
+     "display": "Lautaro",
+     "actual": "Lautaro"
+    },
+    {
+     "display": "Perquenco",
+     "actual": "Perquenco"
+    },
+    {
+     "display": "Vilcún",
+     "actual": "Vilcún"
+    },
+    {
+     "display": "Cholchol",
+     "actual": "Cholchol"
+    },
+    {
+     "display": "Cunco",
+     "actual": "Cunco"
+    },
+    {
+     "display": "Melipeuco",
+     "actual": "Melipeuco"
+    },
+    {
+     "display": "Curarrehue",
+     "actual": "Curarrehue"
+    },
+    {
+     "display": "Pucón",
+     "actual": "Pucón"
+    },
+    {
+     "display": "Villarrica",
+     "actual": "Villarrica"
+    },
+    {
+     "display": "Freire",
+     "actual": "Freire"
+    },
+    {
+     "display": "Pitrufquén",
+     "actual": "Pitrufquén"
+    },
+    {
+     "display": "Gorbea",
+     "actual": "Gorbea"
+    },
+    {
+     "display": "Loncoche",
+     "actual": "Loncoche"
+    },
+    {
+     "display": "Toltén",
+     "actual": "Toltén"
+    },
+    {
+     "display": "Teodoro Schmidt",
+     "actual": "Teodoro Schmidt"
+    },
+    {
+     "display": "Saavedra",
+     "actual": "Saavedra"
+    },
+    {
+     "display": "Carahue",
+     "actual": "Carahue"
+    },
+    {
+     "display": "Nueva Imperial",
+     "actual": "Nueva Imperial"
+    },
+    {
+     "display": "Galvarino",
+     "actual": "Galvarino"
+    },
+    {
+     "display": "Padre las Casas",
+     "actual": "Padre las Casas"
+    },
+    {
+     "display": "Valdivia",
+     "actual": "Valdivia"
+    },
+    {
+     "display": "Mariquina",
+     "actual": "Mariquina"
+    },
+    {
+     "display": "Lanco",
+     "actual": "Lanco"
+    },
+    {
+     "display": "Máfil",
+     "actual": "Máfil"
+    },
+    {
+     "display": "Corral",
+     "actual": "Corral"
+    },
+    {
+     "display": "Los Lagos",
+     "actual": "Los Lagos"
+    },
+    {
+     "display": "Panguipulli",
+     "actual": "Panguipulli"
+    },
+    {
+     "display": "Paillaco",
+     "actual": "Paillaco"
+    },
+    {
+     "display": "La Unión",
+     "actual": "La Unión"
+    },
+    {
+     "display": "Futrono",
+     "actual": "Futrono"
+    },
+    {
+     "display": "Río Bueno",
+     "actual": "Río Bueno"
+    },
+    {
+     "display": "Lago Ranco",
+     "actual": "Lago Ranco"
+    },
+    {
+     "display": "Osorno",
+     "actual": "Osorno"
+    },
+    {
+     "display": "San Pablo",
+     "actual": "San Pablo"
+    },
+    {
+     "display": "Puyehue",
+     "actual": "Puyehue"
+    },
+    {
+     "display": "Puerto Octay",
+     "actual": "Puerto Octay"
+    },
+    {
+     "display": "Purranque",
+     "actual": "Purranque"
+    },
+    {
+     "display": "Río Negro",
+     "actual": "Río Negro"
+    },
+    {
+     "display": "San Juan de la Costa",
+     "actual": "San Juan de la Costa"
+    },
+    {
+     "display": "Puerto Montt",
+     "actual": "Puerto Montt"
+    },
+    {
+     "display": "Puerto Varas",
+     "actual": "Puerto Varas"
+    },
+    {
+     "display": "Cochamó",
+     "actual": "Cochamó"
+    },
+    {
+     "display": "Calbuco",
+     "actual": "Calbuco"
+    },
+    {
+     "display": "Maullín",
+     "actual": "Maullín"
+    },
+    {
+     "display": "Los Muermos",
+     "actual": "Los Muermos"
+    },
+    {
+     "display": "Fresia",
+     "actual": "Fresia"
+    },
+    {
+     "display": "Llanquihue",
+     "actual": "Llanquihue"
+    },
+    {
+     "display": "Frutillar",
+     "actual": "Frutillar"
+    },
+    {
+     "display": "Castro",
+     "actual": "Castro"
+    },
+    {
+     "display": "Ancud",
+     "actual": "Ancud"
+    },
+    {
+     "display": "Quemchi",
+     "actual": "Quemchi"
+    },
+    {
+     "display": "Dalcahue",
+     "actual": "Dalcahue"
+    },
+    {
+     "display": "Curaco de Vélez",
+     "actual": "Curaco de Vélez"
+    },
+    {
+     "display": "Quinchao",
+     "actual": "Quinchao"
+    },
+    {
+     "display": "Puqueldón",
+     "actual": "Puqueldón"
+    },
+    {
+     "display": "Chonchi",
+     "actual": "Chonchi"
+    },
+    {
+     "display": "Queilén",
+     "actual": "Queilén"
+    },
+    {
+     "display": "Quellón",
+     "actual": "Quellón"
+    },
+    {
+     "display": "Chaitén",
+     "actual": "Chaitén"
+    },
+    {
+     "display": "Hualaihué",
+     "actual": "Hualaihué"
+    },
+    {
+     "display": "Futaleufú",
+     "actual": "Futaleufú"
+    },
+    {
+     "display": "Palena",
+     "actual": "Palena"
+    },
+    {
+     "display": "Coyhaique",
+     "actual": "Coyhaique"
+    },
+    {
+     "display": "Lago Verde",
+     "actual": "Lago Verde"
+    },
+    {
+     "display": "Aysén",
+     "actual": "Aysén"
+    },
+    {
+     "display": "Cisnes",
+     "actual": "Cisnes"
+    },
+    {
+     "display": "Guaitecas",
+     "actual": "Guaitecas"
+    },
+    {
+     "display": "Chile Chico",
+     "actual": "Chile Chico"
+    },
+    {
+     "display": "Río Ibánez",
+     "actual": "Río Ibánez"
+    },
+    {
+     "display": "Cochrane",
+     "actual": "Cochrane"
+    },
+    {
+     "display": "O'Higgins",
+     "actual": "O'Higgins"
+    },
+    {
+     "display": "Tortel",
+     "actual": "Tortel"
+    },
+    {
+     "display": "Natales",
+     "actual": "Natales"
+    },
+    {
+     "display": "Torres del Paine",
+     "actual": "Torres del Paine"
+    },
+    {
+     "display": "Punta Arenas",
+     "actual": "Punta Arenas"
+    },
+    {
+     "display": "Río Verde",
+     "actual": "Río Verde"
+    },
+    {
+     "display": "Laguna Blanca",
+     "actual": "Laguna Blanca"
+    },
+    {
+     "display": "San Gregorio",
+     "actual": "San Gregorio"
+    },
+    {
+     "display": "Porvenir",
+     "actual": "Porvenir"
+    },
+    {
+     "display": "Primavera",
+     "actual": "Primavera"
+    },
+    {
+     "display": "Timaukel",
+     "actual": "Timaukel"
+    },
+    {
+     "display": "Cabo de Hornos",
+     "actual": "Cabo de Hornos"
+    },
+    {
+     "display": "Antártica",
+     "actual": "Antártica"
+    },
+    {
+     "display": "Santiago",
+     "actual": "Santiago"
+    },
+    {
+     "display": "Independencia",
+     "actual": "Independencia"
+    },
+    {
+     "display": "Conchalí",
+     "actual": "Conchalí"
+    },
+    {
+     "display": "Huechuraba",
+     "actual": "Huechuraba"
+    },
+    {
+     "display": "Recoleta",
+     "actual": "Recoleta"
+    },
+    {
+     "display": "Providencia",
+     "actual": "Providencia"
+    },
+    {
+     "display": "Vitacura",
+     "actual": "Vitacura"
+    },
+    {
+     "display": "Lo Barnechea",
+     "actual": "Lo Barnechea"
+    },
+    {
+     "display": "Las Condes",
+     "actual": "Las Condes"
+    },
+    {
+     "display": "Ñuñoa",
+     "actual": "Ñuñoa"
+    },
+    {
+     "display": "La Reina",
+     "actual": "La Reina"
+    },
+    {
+     "display": "Macul",
+     "actual": "Macul"
+    },
+    {
+     "display": "Peñalolén",
+     "actual": "Peñalolén"
+    },
+    {
+     "display": "La Florida",
+     "actual": "La Florida"
+    },
+    {
+     "display": "San Joaquín",
+     "actual": "San Joaquín"
+    },
+    {
+     "display": "La Granja",
+     "actual": "La Granja"
+    },
+    {
+     "display": "La Pintana",
+     "actual": "La Pintana"
+    },
+    {
+     "display": "San Ramón",
+     "actual": "San Ramón"
+    },
+    {
+     "display": "San Miguel",
+     "actual": "San Miguel"
+    },
+    {
+     "display": "La Cisterna",
+     "actual": "La Cisterna"
+    },
+    {
+     "display": "El Bosque",
+     "actual": "El Bosque"
+    },
+    {
+     "display": "Pedro Aguirre Cerda",
+     "actual": "Pedro Aguirre Cerda"
+    },
+    {
+     "display": "Lo Espejo",
+     "actual": "Lo Espejo"
+    },
+    {
+     "display": "Estación Central",
+     "actual": "Estación Central"
+    },
+    {
+     "display": "Cerrillos",
+     "actual": "Cerrillos"
+    },
+    {
+     "display": "Maipú",
+     "actual": "Maipú"
+    },
+    {
+     "display": "Quinta Normal",
+     "actual": "Quinta Normal"
+    },
+    {
+     "display": "Lo Prado",
+     "actual": "Lo Prado"
+    },
+    {
+     "display": "Pudahuel",
+     "actual": "Pudahuel"
+    },
+    {
+     "display": "Cerro Navia",
+     "actual": "Cerro Navia"
+    },
+    {
+     "display": "Renca",
+     "actual": "Renca"
+    },
+    {
+     "display": "Quilicura",
+     "actual": "Quilicura"
+    },
+    {
+     "display": "Colina",
+     "actual": "Colina"
+    },
+    {
+     "display": "Lampa",
+     "actual": "Lampa"
+    },
+    {
+     "display": "Tiltil",
+     "actual": "Tiltil"
+    },
+    {
+     "display": "Puente Alto",
+     "actual": "Puente Alto"
+    },
+    {
+     "display": "San José de Maipo",
+     "actual": "San José de Maipo"
+    },
+    {
+     "display": "Pirque",
+     "actual": "Pirque"
+    },
+    {
+     "display": "San Bernardo",
+     "actual": "San Bernardo"
+    },
+    {
+     "display": "Buin",
+     "actual": "Buin"
+    },
+    {
+     "display": "Paine",
+     "actual": "Paine"
+    },
+    {
+     "display": "Calera de Tango",
+     "actual": "Calera de Tango"
+    },
+    {
+     "display": "Melipilla",
+     "actual": "Melipilla"
+    },
+    {
+     "display": "María Pinto",
+     "actual": "María Pinto"
+    },
+    {
+     "display": "Curacaví",
+     "actual": "Curacaví"
+    },
+    {
+     "display": "Alhué",
+     "actual": "Alhué"
+    },
+    {
+     "display": "San Pedro",
+     "actual": "San Pedro"
+    },
+    {
+     "display": "Talagante",
+     "actual": "Talagante"
+    },
+    {
+     "display": "Peñaflor",
+     "actual": "Peñaflor"
+    },
+    {
+     "display": "Isla de Maipo",
+     "actual": "Isla de Maipo"
+    },
+    {
+     "display": "El Monte",
+     "actual": "El Monte"
+    },
+    {
+     "display": "Padre Hurtado",
+     "actual": "Padre Hurtado"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "leadchain0__Social_Lead_ID",
+   "label": "Social Lead ID",
+   "data_type": "text",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 150,
+   "lookup_module": null,
+   "picklist": [],
+   "picklist_values": [],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Fase_FinanciaK",
+   "label": "Fase FinanciaK",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Fase 1",
+    "Fase 2",
+    "Fase 3",
+    "Fase 4",
+    "Concluido",
+    "Caído"
+   ],
+   "picklist_values": [
+    {
+     "display": "Fase 1",
+     "actual": "Fase 1"
+    },
+    {
+     "display": "Fase 2",
+     "actual": "Fase 2"
+    },
+    {
+     "display": "Fase 3",
+     "actual": "Fase 3"
+    },
+    {
+     "display": "Fase 4",
+     "actual": "Fase 4"
+    },
+    {
+     "display": "Concluido",
+     "actual": "Concluido"
+    },
+    {
+     "display": "Caído",
+     "actual": "Caído"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  },
+  {
+   "api_name": "Broker_FK",
+   "label": "Broker FK",
+   "data_type": "picklist",
+   "custom": true,
+   "system_mandatory": false,
+   "layout_mandatory": false,
+   "unique": false,
+   "api_writable": true,
+   "read_only": false,
+   "length": 120,
+   "lookup_module": null,
+   "picklist": [
+    "Abel Cancino Asesor",
+    "Alejandra Madrid Martinez Asesor",
+    "Alejandro Vielma Asesor",
+    "Alexis Garrido Asesor",
+    "Alexis Muñoz Medina Asesor",
+    "Andres Alejandro Bilbao Pozo",
+    "Angelica Medina Asesora",
+    "Angelina Zuñiga Asesora",
+    "Bernardita Pizarrón Asesora",
+    "Carlos Godoy Guajardo Asesor",
+    "Carlos Javier Barria",
+    "Carlos Olguin",
+    "Carolina Nallar",
+    "Carolina Soto",
+    "Christian Tampe Asesor",
+    "Christopher Díaz Suarez Asesor",
+    "Claudia Saldaña Asesora",
+    "Cristian Fonseca Asesor",
+    "Daniel Heinrich Asesor",
+    "Dannette Ordoñez Henriquez",
+    "David Ocaranza Asesor",
+    "Esteban Retamal Santibañez",
+    "Fabian Valenzuela Asesor",
+    "Gabriela Soto Asesora",
+    "Godfrey Dawson",
+    "Gonzalo Moyano Asesor Comercial",
+    "Gonzalo Risso Asesores",
+    "Jaime Sandoval Asesor",
+    "Javier Bunster",
+    "Javiera Perez Valdes Asesor",
+    "Jesus Cruces Palma",
+    "Jorge Castillo",
+    "Jorge Yanez Mardonez Asesor",
+    "José Luis Cifuentes Martinez Asesor M",
+    "José Luis Jiménez Orellana Asesor",
+    "Jose Luis Muñoz Asesor",
+    "José Padilla Asesor",
+    "Jose Saez",
+    "Juan Elgueta Asesor",
+    "Juan Enrique Urquhart Asesor",
+    "Karen Inostroza Asesora",
+    "Kenita Moya Asesora",
+    "León Vidal Asesor",
+    "Leonardo Medina M&M Asesor",
+    "Lionel Rubio Aceituno",
+    "Luckas Ortiz",
+    "Luis Cabrera Retamal Asesor",
+    "Luis Correa Asesor",
+    "Luis Hidalgo Asesor",
+    "Manuel González Asesor",
+    "Marcelo James Harmitton",
+    "Marcelo Mocelli Asesor",
+    "Marco Antonio Ureta Asesor ✍️????",
+    "Marco Cornejo Asesor",
+    "Marcos Ponce Asesor",
+    "Maria Angelica Pérez Gallardo Asesora",
+    "Maria Susana Salazar Jara Asesora Financiak",
+    "Mauricio Arancibia Rojas Asesor",
+    "Mauricio Coloma Asesor",
+    "Mauricio Pérez Celedon Asesor",
+    "Mauro Escobar Salgado",
+    "Oliver Diaz",
+    "Pablo Castro Asesor",
+    "Pablo Mercado Asesor",
+    "Pablo Solís J.",
+    "Paola Rodríguez Fuentes Asesora",
+    "Paola Rojas Asesora",
+    "Patricio Caceres ®️ asesor Pinilla ®️",
+    "Patricio Herrera Asesor",
+    "Patricio Nuñez Asesor",
+    "Paulina Ninoska Nuñez Asesora",
+    "Renato Eugenio Ezquerro carrillo Asesor",
+    "Richard Morales Asesor",
+    "Rita Solange Castro Gonzalez Asesor",
+    "Roberto Fuentes Ramirez Asesor",
+    "Roberto González Caceres Asesor",
+    "Rodrigo Garrido Alvear Asesor",
+    "Rosa Irene Basualto Yañez",
+    "Sandra Dueñas Riffo Asesora",
+    "Sebastián de Rementería Asesor",
+    "Sebastian Valenzuela Gil",
+    "Sergio Arcos Illanes Asesor",
+    "Victor Perez Cid Asesor",
+    "Virginia Contreras"
+   ],
+   "picklist_values": [
+    {
+     "display": "Abel Cancino Asesor",
+     "actual": "Abel Cancino Asesor"
+    },
+    {
+     "display": "Alejandra Madrid Martinez Asesor",
+     "actual": "Alejandra Madrid Martinez Asesor"
+    },
+    {
+     "display": "Alejandro Vielma Asesor",
+     "actual": "Alejandro Vielma Asesor"
+    },
+    {
+     "display": "Alexis Garrido Asesor",
+     "actual": "Alexis Garrido Asesor"
+    },
+    {
+     "display": "Alexis Muñoz Medina Asesor",
+     "actual": "Alexis Muñoz Medina Asesor"
+    },
+    {
+     "display": "Andres Alejandro Bilbao Pozo",
+     "actual": "Andres Alejandro Bilbao Pozo"
+    },
+    {
+     "display": "Angelica Medina Asesora",
+     "actual": "Angelica Medina Asesora"
+    },
+    {
+     "display": "Angelina Zuñiga Asesora",
+     "actual": "Angelina Zuñiga Asesora"
+    },
+    {
+     "display": "Bernardita Pizarrón Asesora",
+     "actual": "Bernardita Pizarrón Asesora"
+    },
+    {
+     "display": "Carlos Godoy Guajardo Asesor",
+     "actual": "Carlos Godoy Guajardo Asesor"
+    },
+    {
+     "display": "Carlos Javier Barria",
+     "actual": "Carlos Javier Barria"
+    },
+    {
+     "display": "Carlos Olguin",
+     "actual": "Carlos Olguin"
+    },
+    {
+     "display": "Carolina Nallar",
+     "actual": "Carolina Nallar"
+    },
+    {
+     "display": "Carolina Soto",
+     "actual": "Carolina Soto"
+    },
+    {
+     "display": "Christian Tampe Asesor",
+     "actual": "Christian Tampe Asesor"
+    },
+    {
+     "display": "Christopher Díaz Suarez Asesor",
+     "actual": "Christopher Díaz Suarez Asesor"
+    },
+    {
+     "display": "Claudia Saldaña Asesora",
+     "actual": "Claudia Saldaña Asesora"
+    },
+    {
+     "display": "Cristian Fonseca Asesor",
+     "actual": "Cristian Fonseca Asesor"
+    },
+    {
+     "display": "Daniel Heinrich Asesor",
+     "actual": "Daniel Heinrich Asesor"
+    },
+    {
+     "display": "Dannette Ordoñez Henriquez",
+     "actual": "Dannette Ordoñez Henriquez"
+    },
+    {
+     "display": "David Ocaranza Asesor",
+     "actual": "David Ocaranza Asesor"
+    },
+    {
+     "display": "Esteban Retamal Santibañez",
+     "actual": "Esteban Retamal Santibañez"
+    },
+    {
+     "display": "Fabian Valenzuela Asesor",
+     "actual": "Fabian Valenzuela Asesor"
+    },
+    {
+     "display": "Gabriela Soto Asesora",
+     "actual": "Gabriela Soto Asesora"
+    },
+    {
+     "display": "Godfrey Dawson",
+     "actual": "Godfrey Dawson"
+    },
+    {
+     "display": "Gonzalo Moyano Asesor Comercial",
+     "actual": "Gonzalo Moyano Asesor Comercial"
+    },
+    {
+     "display": "Gonzalo Risso Asesores",
+     "actual": "Gonzalo Risso Asesores"
+    },
+    {
+     "display": "Jaime Sandoval Asesor",
+     "actual": "Jaime Sandoval Asesor"
+    },
+    {
+     "display": "Javier Bunster",
+     "actual": "Javier Bunster"
+    },
+    {
+     "display": "Javiera Perez Valdes Asesor",
+     "actual": "Javiera Perez Valdes Asesor"
+    },
+    {
+     "display": "Jesus Cruces Palma",
+     "actual": "Jesus Cruces Palma"
+    },
+    {
+     "display": "Jorge Castillo",
+     "actual": "Jorge Castillo"
+    },
+    {
+     "display": "Jorge Yanez Mardonez Asesor",
+     "actual": "Jorge Yanez Mardonez Asesor"
+    },
+    {
+     "display": "José Luis Cifuentes Martinez Asesor M",
+     "actual": "José Luis Cifuentes Martinez Asesor M"
+    },
+    {
+     "display": "José Luis Jiménez Orellana Asesor",
+     "actual": "José Luis Jiménez Orellana Asesor"
+    },
+    {
+     "display": "Jose Luis Muñoz Asesor",
+     "actual": "Jose Luis Muñoz Asesor"
+    },
+    {
+     "display": "José Padilla Asesor",
+     "actual": "José Padilla Asesor"
+    },
+    {
+     "display": "Jose Saez",
+     "actual": "Jose Saez"
+    },
+    {
+     "display": "Juan Elgueta Asesor",
+     "actual": "Juan Elgueta Asesor"
+    },
+    {
+     "display": "Juan Enrique Urquhart Asesor",
+     "actual": "Juan Enrique Urquhart Asesor"
+    },
+    {
+     "display": "Karen Inostroza Asesora",
+     "actual": "Karen Inostroza Asesora"
+    },
+    {
+     "display": "Kenita Moya Asesora",
+     "actual": "Kenita Moya Asesora"
+    },
+    {
+     "display": "León Vidal Asesor",
+     "actual": "León Vidal Asesor"
+    },
+    {
+     "display": "Leonardo Medina M&M Asesor",
+     "actual": "Leonardo Medina M&M Asesor"
+    },
+    {
+     "display": "Lionel Rubio Aceituno",
+     "actual": "Lionel Rubio Aceituno"
+    },
+    {
+     "display": "Luckas Ortiz",
+     "actual": "Luckas Ortiz"
+    },
+    {
+     "display": "Luis Cabrera Retamal Asesor",
+     "actual": "Luis Cabrera Retamal Asesor"
+    },
+    {
+     "display": "Luis Correa Asesor",
+     "actual": "Luis Correa Asesor"
+    },
+    {
+     "display": "Luis Hidalgo Asesor",
+     "actual": "Luis Hidalgo Asesor"
+    },
+    {
+     "display": "Manuel González Asesor",
+     "actual": "Manuel González Asesor"
+    },
+    {
+     "display": "Marcelo James Harmitton",
+     "actual": "Marcelo James Harmitton"
+    },
+    {
+     "display": "Marcelo Mocelli Asesor",
+     "actual": "Marcelo Mocelli Asesor"
+    },
+    {
+     "display": "Marco Antonio Ureta Asesor ✍️????",
+     "actual": "Marco Antonio Ureta Asesor ✍️????"
+    },
+    {
+     "display": "Marco Cornejo Asesor",
+     "actual": "Marco Cornejo Asesor"
+    },
+    {
+     "display": "Marcos Ponce Asesor",
+     "actual": "Marcos Ponce Asesor"
+    },
+    {
+     "display": "Maria Angelica Pérez Gallardo Asesora",
+     "actual": "Maria Angelica Pérez Gallardo Asesora"
+    },
+    {
+     "display": "Maria Susana Salazar Jara Asesora Financiak",
+     "actual": "Maria Susana Salazar Jara Asesora Financiak"
+    },
+    {
+     "display": "Mauricio Arancibia Rojas Asesor",
+     "actual": "Mauricio Arancibia Rojas Asesor"
+    },
+    {
+     "display": "Mauricio Coloma Asesor",
+     "actual": "Mauricio Coloma Asesor"
+    },
+    {
+     "display": "Mauricio Pérez Celedon Asesor",
+     "actual": "Mauricio Pérez Celedon Asesor"
+    },
+    {
+     "display": "Mauro Escobar Salgado",
+     "actual": "Mauro Escobar Salgado"
+    },
+    {
+     "display": "Oliver Diaz",
+     "actual": "Oliver Diaz"
+    },
+    {
+     "display": "Pablo Castro Asesor",
+     "actual": "Pablo Castro Asesor"
+    },
+    {
+     "display": "Pablo Mercado Asesor",
+     "actual": "Pablo Mercado Asesor"
+    },
+    {
+     "display": "Pablo Solís J.",
+     "actual": "Pablo Solís J."
+    },
+    {
+     "display": "Paola Rodríguez Fuentes Asesora",
+     "actual": "Paola Rodríguez Fuentes Asesora"
+    },
+    {
+     "display": "Paola Rojas Asesora",
+     "actual": "Paola Rojas Asesora"
+    },
+    {
+     "display": "Patricio Caceres ®️ asesor Pinilla ®️",
+     "actual": "Patricio Caceres ®️ asesor Pinilla ®️"
+    },
+    {
+     "display": "Patricio Herrera Asesor",
+     "actual": "Patricio Herrera Asesor"
+    },
+    {
+     "display": "Patricio Nuñez Asesor",
+     "actual": "Patricio Nuñez Asesor"
+    },
+    {
+     "display": "Paulina Ninoska Nuñez Asesora",
+     "actual": "Paulina Ninoska Nuñez Asesora"
+    },
+    {
+     "display": "Renato Eugenio Ezquerro carrillo Asesor",
+     "actual": "Renato Eugenio Ezquerro carrillo Asesor"
+    },
+    {
+     "display": "Richard Morales Asesor",
+     "actual": "Richard Morales Asesor"
+    },
+    {
+     "display": "Rita Solange Castro Gonzalez Asesor",
+     "actual": "Rita Solange Castro Gonzalez Asesor"
+    },
+    {
+     "display": "Roberto Fuentes Ramirez Asesor",
+     "actual": "Roberto Fuentes Ramirez Asesor"
+    },
+    {
+     "display": "Roberto González Caceres Asesor",
+     "actual": "Roberto González Caceres Asesor"
+    },
+    {
+     "display": "Rodrigo Garrido Alvear Asesor",
+     "actual": "Rodrigo Garrido Alvear Asesor"
+    },
+    {
+     "display": "Rosa Irene Basualto Yañez",
+     "actual": "Rosa Irene Basualto Yañez"
+    },
+    {
+     "display": "Sandra Dueñas Riffo Asesora",
+     "actual": "Sandra Dueñas Riffo Asesora"
+    },
+    {
+     "display": "Sebastián de Rementería Asesor",
+     "actual": "Sebastián de Rementería Asesor"
+    },
+    {
+     "display": "Sebastian Valenzuela Gil",
+     "actual": "Sebastian Valenzuela Gil"
+    },
+    {
+     "display": "Sergio Arcos Illanes Asesor",
+     "actual": "Sergio Arcos Illanes Asesor"
+    },
+    {
+     "display": "Victor Perez Cid Asesor",
+     "actual": "Victor Perez Cid Asesor"
+    },
+    {
+     "display": "Virginia Contreras",
+     "actual": "Virginia Contreras"
+    }
+   ],
+   "encrypted": false,
+   "formula": false,
+   "has_validation_rule": false,
+   "tooltip": null,
+   "in_layout": true
+  }
+ ]
+}

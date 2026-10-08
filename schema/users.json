@@ -1,0 +1,104 @@
+[
+ {
+  "id": "6839037000000566001",
+  "full_name": "Rodrigo Martori",
+  "role": "CEO",
+  "status": "active"
+ },
+ {
+  "id": "6839037000000596151",
+  "full_name": "Luciano Pellegrini",
+  "role": "Jefes Comerciales",
+  "status": "disabled"
+ },
+ {
+  "id": "6839037000000614036",
+  "full_name": "Hari Saits",
+  "role": "Ejecutivos y Analistas",
+  "status": "active"
+ },
+ {
+  "id": "6839037000000614660",
+  "full_name": "Matias Sandoval",
+  "role": "Ejecutivos y Analistas",
+  "status": "active"
+ },
+ {
+  "id": "6839037000000614673",
+  "full_name": "Camilo Bravo",
+  "role": "Jefes Comerciales",
+  "status": "active"
+ },
+ {
+  "id": "6839037000001554108",
+  "full_name": "Marcelo Correa",
+  "role": "Jefes Fija / Deuda",
+  "status": "active"
+ },
+ {
+  "id": "6839037000001769357",
+  "full_name": "Sebastián Sergio Méndez Estay",
+  "role": "Jefes Fija / Deuda",
+  "status": "active"
+ },
+ {
+  "id": "6839037000003640060",
+  "full_name": "Felipe Norese",
+  "role": "Ejecutivos y Analistas",
+  "status": "disabled"
+ },
+ {
+  "id": "6839037000005107115",
+  "full_name": "Johnny Hernández",
+  "role": "Ejecutivos y Analistas",
+  "status": "disabled"
+ },
+ {
+  "id": "6839037000005112177",
+  "full_name": "Diego Vargas",
+  "role": "Ejecutivos y Analistas",
+  "status": "active"
+ },
+ {
+  "id": "6839037000005112192",
+  "full_name": "Marcelo Hernández Gálvez",
+  "role": "Ejecutivos y Analistas",
+  "status": "disabled"
+ },
+ {
+  "id": "6839037000007080045",
+  "full_name": "Rommy Fernanda Leiva Lopez",
+  "role": "Ejecutivo Fija / Deuda",
+  "status": "active"
+ },
+ {
+  "id": "6839037000007480019",
+  "full_name": "Daniel Larrain Elias",
+  "role": "Jefes Fija / Deuda",
+  "status": "active"
+ },
+ {
+  "id": "6839037000007735003",
+  "full_name": "Tamara Rojas",
+  "role": "Jefes Comerciales",
+  "status": "active"
+ },
+ {
+  "id": "6839037000008396004",
+  "full_name": "Ricardo Perez Elmohrez",
+  "role": "Ejecutivo Fija / Deuda",
+  "status": "active"
+ },
+ {
+  "id": "6839037000008847001",
+  "full_name": "Andrés Bilbao Bilbao",
+  "role": "Ejecutivo Fija / Deuda",
+  "status": "active"
+ },
+ {
+  "id": "6839037000008917023",
+  "full_name": "Rodrigo Quintana",
+  "role": "Ejecutivos y Analistas",
+  "status": "active"
+ }
+]
